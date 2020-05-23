@@ -1,0 +1,277 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+
+
+
+
+
+
+
+
+
+<html>
+  <head>
+    <title>pdfdoclet - Build information</title>
+    <style type="text/css" media="all">
+      @import url("./css/maven-base.css");
+      @import url("./css/maven-theme.css");
+      @import url("./css/site.css");
+    </style>
+    <link rel="stylesheet" href="./css/print.css" type="text/css" media="print" />
+          <meta name="author" content="Marcel Schoen" />
+        <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1" />
+      </head>
+  <body class="composite">
+    <table id="bannertable" cellpadding="0" cellspacing="0" width="100%">
+    	<tr>
+    		<td><div id="banner">
+    			<h1><a href="http://sourceforge.net/projects/pdfdoclet/">PDFDoclet</a></h1>
+      			</div>
+      		</td>
+      		<td align="right">
+      		 	      			<img src="./images/sponsored_by_usp.jpg" alt="united security providers Logs" />
+			</td>
+		</tr>
+	</table>
+
+
+      <div class="clear">
+        <hr/>
+      </div>
+    </div>
+    <div id="breadcrumbs">
+          
+  
+
+  
+    
+  
+  
+            <div class="xleft">
+        Last Published: 11/03/2013
+                      </div>
+            <div class="xright">      <a href="links.html">Links</a>
+          
+  
+
+  
+    
+  
+  
+  </div>
+      <div class="clear">
+        <hr/>
+      </div>
+    </div>
+    <div id="leftColumn">
+      <div id="navcolumn">
+           
+  
+
+  
+    
+  
+  
+                   <h5>Usage</h5>
+        <ul>
+              
+    <li class="none">
+              <a href="running.html">Running PDFDoclet</a>
+        </li>
+          </ul>
+          <h5>Usage</h5>
+        <ul>
+              
+    <li class="none">
+              <a href="running.html">Running PDFDoclet</a>
+        </li>
+              
+    <li class="none">
+              <a href="configuration.html">Configuration</a>
+        </li>
+              
+    <li class="none">
+              <a href="titlepage.html">Title Page</a>
+        </li>
+              
+    <li class="none">
+              <a href="appendices.html">Appendices</a>
+        </li>
+              
+    <li class="none">
+              <a href="bookmarks.html">Bookmarks</a>
+        </li>
+              
+    <li class="none">
+              <a href="overview.html">Overview</a>
+        </li>
+              
+    <li class="none">
+              <a href="customtags.html">Custom Tags</a>
+        </li>
+              
+    <li class="none">
+              <a href="filtering.html">Filtering</a>
+        </li>
+              
+    <li class="none">
+              <a href="printing.html">Printing</a>
+        </li>
+              
+    <li class="none">
+              <a href="fonts.html">Fonts</a>
+        </li>
+          </ul>
+          <h5>Miscellaneous</h5>
+        <ul>
+              
+    <li class="none">
+              <a href="features.html">Features</a>
+        </li>
+              
+    <li class="none">
+              <a href="htmltags.html">Supported Tags</a>
+        </li>
+              
+    <li class="none">
+              <a href="samples.html">Examples</a>
+        </li>
+              
+    <li class="none">
+              <a href="todo.html">Todo</a>
+        </li>
+              
+    <li class="none">
+              <a href="faq.html">FAQ</a>
+        </li>
+              
+    <li class="none">
+              <a href="credits.html">Credits</a>
+        </li>
+              
+    <li class="none">
+              <strong>Build information</strong>
+        </li>
+          </ul>
+                                       <a href="http://maven.apache.org/" title="Built by Maven" id="poweredBy">
+            <img alt="Built by Maven" src="./images/logos/maven-feather.png"></img>
+          </a>
+                       
+  
+
+  
+    
+  
+  
+        </div>
+    </div>
+    <div id="bodyColumn">
+      <div id="contentBox">
+        <meta name="keyword" content="java, maven, build"><div class="section"><h2><a name="Build_Information"></a>Build Information</h2>
+<div class="section"><h3><a name="Overview"></a>Overview</h3>
+<p><p></p>
+Source code development is being done on your local machine using Maven.</p>
+<p><p></p>
+Unit and functional testing is performed on your local machine using JUnit. There is no integration testing 
+			concept available yet.</p>
+</div>
+<div class="section"><h3><a name="Prerequisites"></a>Prerequisites</h3>
+<p><p></p>
+Before you can start, your environment must meet the following prerequisites:
+				<ul><li>Installed Maven</li>
+<li>J2SE 1.4.X (and JAVA_HOME pointing to it)</li>
+</ul>
+</p>
+</div>
+<div class="section"><h3><a name="Build_Command"></a>Build Command</h3>
+<p><p></p>
+To build the project please use the following:</p>
+<div class="source"><pre>maven jar</pre>
+</div>
+</div>
+</div>
+<div class="section"><h2><a name="CVS_Tags"></a>CVS Tags</h2>
+<p><p></p>
+Valid tags are called rel-x-y-z.</p>
+</div>
+<div class="section"><h2><a name="Create_Distribution_Package"></a>Create Distribution Package</h2>
+<div class="section"><h3><a name="Local"></a>Local</h3>
+<p>To create a distribution simply lauch:</p>
+<div class="source"><pre>maven dist</pre>
+</div>
+<p><p></p>
+This goal creates all distribution files. </p>
+<p><p></p>
+The results are always written to ./target/distributions. </p>
+</div>
+</div>
+<div class="section"><h2><a name="Checklist_for_Distribution"></a>Checklist for Distribution</h2>
+<div class="section"><h3><a name="While_Developing"></a>While Developing</h3>
+<ul><li>Create changes, test it</li>
+<li>create a snapshot for everybody to use, communicate it</li>
+<div class="source"><pre>maven jar:deploy-snapshot</pre>
+</div>
+<li>define code freeze date, communicate it</li>
+<li>implement changes told you from others, create SNAPSHOT</li>
+<div class="source"><pre>maven jar:deploy-snapshot</pre>
+</div>
+</ul>
+</div>
+<div class="section"><h3><a name="Freeze_Date_is_here"></a>Freeze Date is here</h3>
+<ul><li>check for version number change in project.xml</li>
+<li>check documentation (changes.xml, HISTORY.txt, README.txt, Release Notes, etc.)</li>
+<li>check maven ttdist for correctness</li>
+<li>check if there are SNAPSHOT dependencies, change them to a released version</li>
+<li>everything is in cvs now?</li>
+<li>create a version tag in cvs, e.g. &quot;rel-1-1-0&quot;</li>
+<li>create the distribution: maven jar:deploy, maven dist:deploy, maven mydist:deploy</li>
+</ul>
+</div>
+</div>
+<div class="section"><h2><a name="Eclipse_Integration"></a>Eclipse Integration</h2>
+<p><p></p>
+To use/edit this project in eclipse do the following:</p>
+<div class="source"><pre>maven eclipse</pre>
+</div>
+<p><p></p>
+NOTE: The local maven repository must be referenced using the MAVEN_REPO variable. 
+		This property must me set once for each eclipse installation. (See sample below)</p>
+<p><p></p>
+In Eclipse: Windows - Preferences - Java - Build Path - Classpath variables, add a variable:</p>
+<div class="source"><pre>MAVEN_REPO =  <i>your maven repository</i></pre>
+</div>
+<p><p></p>
+On Windows, you set the local maven repository location by saving a file build.properties 
+		in the directory where %USERPROFILE% is pointing at. The content of the file can be as follows:</p>
+<div class="source"><pre>
+	maven.repo.local=c:/workspace/maven-repository
+	# maven.junit.format=plain
+	# maven.junit.usefile=false
+	</pre>
+</div>
+</div>
+
+      </div>
+    </div>
+    <div class="clear">
+      <hr/>
+    </div>
+    <div id="footer">
+      <div class="xright">&#169;  
+          2013
+    
+          PDFDoclet
+          
+  
+
+  
+    
+  
+  
+  </div>
+      <div class="clear">
+        <hr/>
+      </div>
+    </div>
+  </body>
+</html>

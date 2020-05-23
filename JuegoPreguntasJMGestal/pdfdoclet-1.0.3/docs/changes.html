@@ -1,0 +1,376 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+
+
+
+
+
+
+
+
+
+<html>
+  <head>
+    <title>pdfdoclet - Changes</title>
+    <style type="text/css" media="all">
+      @import url("./css/maven-base.css");
+      @import url("./css/maven-theme.css");
+      @import url("./css/site.css");
+    </style>
+    <link rel="stylesheet" href="./css/print.css" type="text/css" media="print" />
+          <meta name="author" content="Marcel Schoen" />
+        <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1" />
+      </head>
+  <body class="composite">
+    <table id="bannertable" cellpadding="0" cellspacing="0" width="100%">
+    	<tr>
+    		<td><div id="banner">
+    			<h1><a href="http://sourceforge.net/projects/pdfdoclet/">PDFDoclet</a></h1>
+      			</div>
+      		</td>
+      		<td align="right">
+      		 	      			<img src="./images/sponsored_by_usp.jpg" alt="united security providers Logs" />
+			</td>
+		</tr>
+	</table>
+
+
+      <div class="clear">
+        <hr/>
+      </div>
+    </div>
+    <div id="breadcrumbs">
+          
+  
+
+  
+    
+  
+  
+            <div class="xleft">
+        Last Published: 11/03/2013
+                      </div>
+            <div class="xright">      <a href="links.html">Links</a>
+          
+  
+
+  
+    
+  
+  
+  </div>
+      <div class="clear">
+        <hr/>
+      </div>
+    </div>
+    <div id="leftColumn">
+      <div id="navcolumn">
+           
+  
+
+  
+    
+  
+  
+                   <h5>Usage</h5>
+        <ul>
+              
+    <li class="none">
+              <a href="running.html">Running PDFDoclet</a>
+        </li>
+          </ul>
+          <h5>Usage</h5>
+        <ul>
+              
+    <li class="none">
+              <a href="running.html">Running PDFDoclet</a>
+        </li>
+              
+    <li class="none">
+              <a href="configuration.html">Configuration</a>
+        </li>
+              
+    <li class="none">
+              <a href="titlepage.html">Title Page</a>
+        </li>
+              
+    <li class="none">
+              <a href="appendices.html">Appendices</a>
+        </li>
+              
+    <li class="none">
+              <a href="bookmarks.html">Bookmarks</a>
+        </li>
+              
+    <li class="none">
+              <a href="overview.html">Overview</a>
+        </li>
+              
+    <li class="none">
+              <a href="customtags.html">Custom Tags</a>
+        </li>
+              
+    <li class="none">
+              <a href="filtering.html">Filtering</a>
+        </li>
+              
+    <li class="none">
+              <a href="printing.html">Printing</a>
+        </li>
+              
+    <li class="none">
+              <a href="fonts.html">Fonts</a>
+        </li>
+          </ul>
+          <h5>Miscellaneous</h5>
+        <ul>
+              
+    <li class="none">
+              <a href="features.html">Features</a>
+        </li>
+              
+    <li class="none">
+              <a href="htmltags.html">Supported Tags</a>
+        </li>
+              
+    <li class="none">
+              <a href="samples.html">Examples</a>
+        </li>
+              
+    <li class="none">
+              <a href="todo.html">Todo</a>
+        </li>
+              
+    <li class="none">
+              <a href="faq.html">FAQ</a>
+        </li>
+              
+    <li class="none">
+              <a href="credits.html">Credits</a>
+        </li>
+              
+    <li class="none">
+              <a href="build-information.html">Build information</a>
+        </li>
+          </ul>
+                                       <a href="http://maven.apache.org/" title="Built by Maven" id="poweredBy">
+            <img alt="Built by Maven" src="./images/logos/maven-feather.png"></img>
+          </a>
+                       
+  
+
+  
+    
+  
+  
+        </div>
+    </div>
+    <div id="bodyColumn">
+      <div id="contentBox">
+        <release version="1.0.2" date="10-12-2005" description="Bugfix release."><action dev="marcelschoen" type="fix" issue="1327157">Custom tag names
+		are now handled case-sensitive (as they should be!).
+		</action><action dev="marcelschoen" type="fix" issue="1313937">Multiple inheritance
+		of interfaces was not handled correctly. The &quot;extends ...&quot; text contained
+		only one of the inherited interfaces.
+		</action><action dev="marcelschoen" type="fix" issue="1375788">The doclet generated
+		a 0-length PDF file, if an invalid font was specified. An appropriate error
+		message was printed for the missing font, but then the doclet continued and
+		failed later with a NullPointerException, leaving a corrupt file behind. Now
+		the doclet cancels processing if a font path is invalid and deletes the
+		PDF file.
+		</action><action dev="marcelschoen" type="fix" issue="1293618">Field and methods 
+		within a class bookmark entry are now sorted alphabetically.
+		</action></release><release version="1.0.1" date="11-09-2005" description="Bugfix release."><action dev="marcelschoen" type="add" issue="1256563">Added support for more HTML tags: STRONG and 
+		Definition lists (DL / DT / DD).
+		</action><action dev="marcelschoen" type="update" issue="1256562">Made PRE (sections of 
+		preformatted code) nicer and better distinguishable from the rest of the page,
+		by putting them into a box with a black border and light-gray background color.
+		</action><action dev="marcelschoen" type="add">Added support for specifying several files 
+		from which to import pages into the overview, using numbered property names, such
+		as &quot;overview.pdf.file.1&quot;, &quot;overview.pdf.file.2&quot; etc.
+		</action><action dev="marcelschoen" type="fix" issue="1256571">The spacing before some
+		Hx-tags (like H1, H2..) was smaller than the spacing after the tag. This lead to
+		the impression that the heading belonged to the previous parapgraph instead of
+		the next.
+		</action><action dev="marcelschoen" type="fix" issue="1256540">
+		 Font path names were not used relative to the specified &quot;workdir&quot; property
+		 value.
+		</action><action dev="marcelschoen" type="fix" issue="1256542">Classes within a package
+		 in the bookmarks were not sorted alphabetically.
+		</action><action dev="marcelschoen" type="fix" issue="1283004">The CENTER tag did not
+		work anymore. The reason was a JTidy setting which caused CENTER tags to be
+		replaced with DIV tags.
+		</action></release><release version="1.0.0" date="03-07-2005" description="First stable production release."><action dev="marcelschoen" type="add">Added support for importing pages from PDF files
+		in appendices, before the overview and for the title page.
+		</action><action dev="marcelschoen" type="add">Added support for including custom HTML files
+		as appendices before the index.
+		</action><action dev="marcelschoen" type="update">Massively improved bookmarking code in order to
+		support the &quot;-group&quot; parameter and allow for a more detailled bookmark tree per class
+		entry (links to constructors, fields and methods).
+		</action><action dev="marcelschoen" type="add">Added support for anchors (&lt;a name=&quot;...&quot; &gt;)
+		</action><action dev="marcelschoen" type="add">Added support for custom bookmark entries, using
+		  special anchors (&lt;a name=&quot;pdfbookmark&quot; label=&quot;....&quot; &gt;). This is especially useful
+		  if an overview is used which spans several printed pages. Together with the HTML 
+		  comment used to trigger page breaks, this feature helps to improve the structure
+		  and usability of the generated PDF.
+		</action><action dev="marcelschoen" type="add">Configuration switch &quot;inherited.summary.table&quot; added for 
+			enabling / disabling printing of summary tables for inherited methods and fields. The
+			property also allows to print only summary tables for elements inherited within the
+			scope of the API, but not of methods, fields etc. inherited from standard classes
+			such as &quot;<code>java.lang.Object</code>&quot;.
+		</action><action dev="marcelschoen" type="update">Bulleted lists are now displayed with an actual
+			bullet symbol instead of a dash character.
+		</action><action dev="marcelschoen" type="update">Added some leading space for regions of PREformatted
+			text, just as in HTML pages.
+		</action><action dev="marcelschoen" type="fix">Handling of &quot;author&quot;, &quot;version&quot; and &quot;since&quot; parameters /
+			properties didn't work correctly anymore. This has been fixed, so that printing of those tags
+			can be suppressed again.
+		</action><action dev="marcelschoen" type="update">Minor layout / spacing improvements.
+		</action><action dev="marcelschoen" type="add">Added parameters for overriding labels of bookmark 
+		entries for fields, constructor and methods outlines.
+		</action></release><release version="0.9.2" date="04-06-2005" description="Hardcoded test-output removed from overview."><action dev="marcelschoen" type="add">Unfortunatly, some hard-coded test-output I had inserted
+			into the overview had not been removed. I only realized that after I had just release 0.9.1,
+			so I had to remove that release immediately and put this fixed version online.
+		</action></release><release version="0.9.1" date="04-06-2005" description="HTML table support implemented."><action dev="marcelschoen" type="add">Implemented support for HTML tables.
+		</action><action dev="marcelschoen" type="add">Added support for list types in ordered lists (roman etc.).
+		</action><action dev="marcelschoen" type="fix">Bulleted lists are now printed correctly in method 
+			docs again (and so are tables).
+		</action><action dev="marcelschoen" type="update">Updated to iText 1.3.
+         </action><action dev="marcelschoen" type="update">Got rid of ORO package because no regexp processing
+			is done by the PDFDoclet anymore. Those methods have been replaced by similar functionality
+			of Sun's base doclet API itself.
+         </action></release><release version="0.9.0" date="18-04-2005" description="New features and bug fixes implemented."><action dev="marcelschoen" type="add">Added support for custom filtering. It is now
+		possible to create PDF output only for certain classes / methods / members, based on custom
+		tags. See the &quot;Usage&quot; page of the HTML documentation for details. The main reason for this
+		feature is to allow to create extracts of an API based, for example, on project or developer
+		names etc.</action><action dev="marcelschoen" type="add">Added support for printing any custom tags (such
+		as &quot;@todo&quot;). A custom tag like &quot;@todo&quot; will be ignored, though, as long as there is no label
+		defined for it in the configuration. A label definition for a custom &quot;todo&quot; tag could be:
+		labels.tag.todo=To Do:
+         </action><action dev="marcelschoen" type="fix" issue="1183868">&quot;workdir&quot; was processed as a configuration
+		property only, but not as a commandline argument.
+		</action><action dev="marcelschoen" type="fix" issue="1186422">A-tags (links) without a &quot;href&quot; field
+			caused a NullPointerException in the TagA class.
+		</action><action dev="marcelschoen" type="fix">Added printing of fields and methods inherited from
+		any interface in the &quot;... inherited&quot; tables.
+         </action><action dev="marcelschoen" type="update">Cleaned up the &quot;test-pdf&quot; example sources.
+         </action><action dev="marcelschoen" type="update">Added note about custom tag to FAQ.
+         </action><action dev="marcelschoen" type="update">Some refactoring (extracted some large methods
+		from the main class &quot;PDFDoclet&quot; which has now, at long 
+		last, achieved a reasonable size.
+         </action></release><release version="0.8.2" date="06-03-2005" description="Bugfix release."><action dev="marcelschoen" type="fix" issue="1156553">Resolving the &quot;inheritDoc&quot;-inline-tag was implemented in
+	a way which could not deal with recursive inheritance over
+	several levels of classes (subsubclass inherits doc from 
+	subclass which inherits doc from subclass etc.). The fix
+	implements a proper, recursive resolution. The test-pdf
+	example has been exteded to test this (classes OtherClass,
+	SubClass and TestClass).
+        </action><action dev="marcelschoen" type="add">Included Log4j for debug/info logging. If it is called with 
+	the &quot;-debug&quot; flag, it prints plenty of debug output to the
+	logfile &quot;pdfdoclet.log&quot; and some info log to the console.
+         </action></release><release version="0.8.1" date="09-02-2005" description="Bugfix release."><action dev="marcelschoen" type="fix" issue="849061">The annoying missing-blanks-problem has finally gone away.
+    The secret lied in using JTidy differently (and maybe also
+	in using a more current version of JTidy). I won't go in much
+	detail here, but I'll just say that it should no longer be 
+	necessary to encode blanks or insert them before an
+	ending tag just to get them out in the PDF.
+    </action><action dev="marcelschoen" type="fix" issue="1058391">ClassCastException caused by open list tags has been
+    solved by the fact that JTidy now actually tidies up the HTML.</action><action dev="marcelschoen" type="fix">Implemented better error handling for IOException which occurs
+	if the PDF file cannot be opened for writing.</action><action dev="marcelschoen" type="fix">Shut up JTidy. This was necessary because currently i'm using a
+	snapshot release of JTidy which creates lots of debug output.</action></release><release version="0.8.0" date="14-01-2005" description="Project resurrection after a year of silence."><action dev="marcelschoen" type="update">Java 1.4 is now required. This is due to the fact that
+    PDFDoclet now uses some methods of the doclet API 
+    available only from 1.4 on. Sorry, if that's a problem to
+    anyone. However, I think that nowadays Java 1.4 should be
+    available on almost any platform.
+    If not, maybe it's possible to run it with Java 1.2/1.3
+    and just include the &quot;tools.jar&quot; from 1.4 in the classpath.
+    I've no idea if that's possible, just an idea that came to
+    my mind. You may try that if you're really desperate... </action><action dev="marcelschoen" type="add">Switched to Maven as the build tool.</action><action dev="marcelschoen" type="update">Included the most current snapshot release of JTidy.</action><action dev="marcelschoen" type="add">Implemented creation of single Jar file which contains
+			all dependencies to make javadoc execution easier.</action><action dev="marcelschoen" type="add">Constant values are now printed in field summaries.</action><action dev="marcelschoen" type="add">Implemented printing of inherited methods and fields in 
+    summary of interfaces (which extend another interface).</action><action dev="marcelschoen" type="add" issue="913036">Support for {@inheritDoc} inline tag
+    Implemented for both method doc blocks and tags</action><action dev="marcelschoen" type="add">New &quot;font..&quot; parameters (see README) allow to use other fonts
+    by embedding TrueType fonts (ttf).</action><action dev="marcelschoen" type="fix">NullPointerException fixed which occurred if an image tag
+    had no &quot;src&quot; attribute (for example due to a typo, like &quot;srx=&quot;)</action><action dev="marcelschoen" type="fix" issue="972464">Overview pages had no header and footer and therefore no 
+    page numbering. This has been fixed.</action><action dev="marcelschoen" type="fix" issue="894692">Until now, in method signatures, only for the return type
+    a link was created, but not for the parameters. Now, the
+    parameters are links too (depending on their type, of course).</action><action dev="marcelschoen" type="fix" issue="931060">Implemented correct support for @see tags and inline links
+    like {@link ..}, inluding correct linking to the actual
+    member (method, variable), not just the containing class.</action><action dev="marcelschoen" type="fix" issue="894560">Change the boomark entry of the title
+    In the outline frame (the bookmarks), the labels were somewhat
+    inconsistent (&quot;Title Page&quot;, but &quot;Overview&quot; and &quot;Index&quot;, not 
+    &quot;Overview Page&quot; etc.). The defaults are now consistent (without
+    &quot;page&quot;). The labels can also be customized with 3 new 
+    configuration properties: &quot;label.bookmarks.index&quot;, &quot;label.bookmarks.title&quot; and &quot;label.bookmarks.overview&quot;</action><action dev="marcelschoen" type="fix" issue="894449">Changed IConstants.LB_EXCEP_TAG value to &quot;Throws:&quot;. 
+    The label &quot;Exceptions:&quot; was replaced by &quot;Throws:&quot;</action><action dev="marcelschoen" type="fix" issue="894506">Allow all options to be set in the config file or as 
+			params. 
+    All configuration values may now be specified either in a property
+    file or as commandline arguments. There is a new section in the
+    README file which explains all configuration properties.</action><action dev="marcelschoen" type="fix" issue="894488,894544,894478">Several still hard-coded parameter names or values replaced</action><action dev="marcelschoen" type="fix" issue="894562">Add an 'Overview' entry into the bookmarks
+    The &quot;overview.html&quot; page now also has its own entry in the 
+    bookmarks, just behind the &quot;Title Page&quot; entry.</action><action dev="marcelschoen" type="fix" issue="895216">
+    When the first sentence contained package names like &quot;java.util...&quot;,
+    only the part of the text up to the first dot &quot;.&quot; was taken as the
+    first sentence (used in the summary tables).</action><action dev="marcelschoen" type="fix" issue="895261">NullPointerException for unvalued attribute
+    HTML-tag attributes without values, such as NOWRAP in a TABLE,
+    created a NullPointerException. This has been fixed.</action><action dev="marcelschoen" type="fix" issue="894673">Parameters in bookmarks stopping after the first one
+    Methods in bookmarks now contain all parameters, but only their
+    types (to keep the bookmarks short), like this:
+    doSomething(String,Properties)</action><action dev="marcelschoen" type="fix" issue="895226">Error messages need some context info
+    In debug mode, the member (method, variable..) currently 
+    being processed is now also printed. This makes it easier to
+    locate HTML problems mentioned by JTidy warnings.</action><action dev="marcelschoen" type="fix" issue="894708">
+    Some mixed case text has been fixed for better consistency.</action></release><release version="0.7.0" date="17-01-2004"><action dev="marcelschoen" type="add">Made index more compact by printing all page numbers
+    of members (methods, classes, fields) with same name 
+    on the same line (like: doSomething 23, 35, 88).</action><action dev="marcelschoen" type="add">Added link to title page in outline (navigation frame).</action><action dev="marcelschoen" type="fix" issue="848194">Implemented handling of &quot;doc-files&quot; subdirectory.
+    </action><action dev="marcelschoen" type="fix">Fixed problem with doclet hanging if a file (usually
+    an image) was not found due to an invalid path.
+    Now the doclet just ignores the image in those cases
+    and completes the rest of the javadoc.</action><action dev="marcelschoen" type="fix" issue="845938">Fixed problem of parameter names and their descriptions
+    not being on the same line.</action><action dev="marcelschoen" type="fix" issue="848304">Fixed &quot;dontspec&quot;-config problem with field summaries.
+    </action></release><release version="0.6.0" date="06-11-2005"><action dev="marcelschoen" type="add">Added option for custom order of packages in the 
+    bookmarks frame (new parameter &quot;sort&quot;, as commandline
+    argument or as configuration parameter - see the 
+    &quot;config_test.properties&quot; file for an example).</action><action dev="marcelschoen" type="add" issue="800912">Added support for the {@docRoot} tag introduced in 
+    JDK 1.3. It's now being replaced with the working 
+    directory value, which is just &quot;.&quot; if unspecified.</action><action dev="marcelschoen" type="add">Added option for specifying packages whose classes 
+    should not be fully qualified (new parameter &quot;dontspec&quot; 
+    as commandline argument or as configuration property).
+    Example: By setting &quot;dontspec=java.lang&quot;, a String method
+    parameter will be printed just as &quot;String&quot; and not as
+    &quot;java.lang.String&quot;.
+    Until now, only the packages for which the javadoc 
+    was printed were not fully qualified (which is the
+    default behaviour of the regular javadoc).</action><action dev="marcelschoen" type="add" issue="821282">Added correct handling of inner classes. They are now
+    connected to their containing class in the bookmarks
+    navigation frame.</action><action dev="marcelschoen" type="fix" issue="811384">Fixed brackets missing for array method 
+    arguments in method summary.</action><action dev="marcelschoen" type="fix" issue="833186">Fixed all parameters in summaries have
+    the name of the first param.</action><action dev="marcelschoen" type="add">Implemented the &lt;EM&gt; tag as a copy of the &lt;I&gt; tag 
+    (just italic text).</action><action dev="marcelschoen" type="fix">Also fixed the &quot;broken&quot; binary package of 0.5.1 (version number 
+of JAR file was invalid in build.xml and shell script). This 
+will not happen again as I've changed the build target which 
+builds the binary package. It uses an ANT filter now to make 
+sure the version number is always up-to-date.</action></release>
+      </div>
+    </div>
+    <div class="clear">
+      <hr/>
+    </div>
+    <div id="footer">
+      <div class="xright">&#169;  
+          2013
+    
+          PDFDoclet
+          
+  
+
+  
+    
+  
+  
+  </div>
+      <div class="clear">
+        <hr/>
+      </div>
+    </div>
+  </body>
+</html>

@@ -1,0 +1,24 @@
+
+================================================================================ 
+PDFDoclet announces the PDFDoclet 1.0.2 release 
+================================================================================ 
+
+Changes in this version include:
+
+--------------------------------------------------------------------------------
+  Fixed bugs:
+--------------------------------------------------------------------------------
+- Custom tag names are now handled case-sensitive (as they should be!). 
+  Issue: 1327157. 
+- Multiple inheritance of interfaces was not handled correctly. The "extends 
+  ..." text contained only one of the inherited interfaces. Issue: 1313937. 
+- The doclet generated a 0-length PDF file, if an invalid font was specified. 
+  An appropriate error message was printed for the missing font, but then the 
+  doclet continued and failed later with a NullPointerException, leaving a 
+  corrupt file behind. Now the doclet cancels processing if a font path is 
+  invalid and deletes the PDF file. Issue: 1375788. 
+- Field and methods within a class bookmark entry are now sorted 
+  alphabetically. Issue: 1293618. 
+
+================================================================================
+(c) PDFDoclet

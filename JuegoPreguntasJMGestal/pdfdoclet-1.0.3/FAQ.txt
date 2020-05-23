@@ -1,0 +1,128 @@
+Frequently Asked Questions
+==========================
+		
+Index
+-----
+
+Question 1: PDFDoclet crashes, or hangs. What should I do?
+Question 2: My HTML-tags are not handled correctly (or at all). Why?
+Question 3: How do I use the doclet in a shell script?
+Question 4: My image files are not found (for the image tag).
+Question 5: The blank space character between two tags gets lost
+Question 6: How do I print or disable custom tags?
+Question 7: I get Runtime exceptions '..has no valid destination'
+Question 8: My embedded font creates some strange characters.
+
+
+Details
+-------
+
+-----------------------------------------------------------------------------
+
+Question 1: PDFDoclet crashes, or hangs. What should I do?
+
+Answer:
+ 
+	If you happen to find a bug in PDFDoclet, it's likely to be some
+	javadoc-feature that has not been implemented correctly or
+	not at all in PDFDoclet. In that case, see if you can reproduce
+	the problem, and if you can nail it down to a certain part of
+	your Java sourcecodes. Then submit a bug entry in the
+	SourceForge project bug tracking database:
+	
+
+Answer:
+ 
+	https://sourceforge.net/tracker/?group_id=55507&atid=477255
+	
+
+Answer:
+ 
+	Describe your findings as detailled as possible, and attach
+	any files that may be useful in fixing the bug (the logfile,
+	your source files etc.).
+		
+-----------------------------------------------------------------------------
+
+Question 2: My HTML-tags are not handled correctly (or at all). Why?
+
+Answer:
+ 
+    Some HTML tags are simply not supported at all (yet),
+    as it is quite complicated to create appropriate PDF objects
+    for certain complicated HTML code. This might be implemented
+    in future versions. If this is really a must-have for your project,
+	check out other PDF-generating doclets (see the links page
+	on the PDFDoclet website).
+		
+-----------------------------------------------------------------------------
+
+Question 3: How do I use the doclet in a shell script?
+
+Answer:
+ 
+    Check out the "binaries" package. It contains examples for
+    using the doclet both with shell scripts or with ANT.
+		
+-----------------------------------------------------------------------------
+
+Question 4: My image files are not found (for the image tag).
+
+Answer:
+ 
+    Use the "-workdir" configuration parameter (or the "workdir"
+    configuration property in the config file). Use it to set the start
+    path of the doclet for looking for external files to the path
+    relative to which your image can be found, as you specified
+    it in the "<img>" tag. Take a look at the example "test-pdf"
+    in the "example/src3" directory.
+
+    If the working directory is not specified, it's just ".".
+
+    Please note that the tag {@docRoot} at the beginning of a file
+    path specification will just be replaced with the value of the
+    working directory.
+
+-----------------------------------------------------------------------------
+
+Question 5: The blank space character between to tags gets lost
+
+Answer:
+ 
+    This problem has been solved with release 0.8.1 of PDFDoclet. 
+    The reason for this problem has been an incorrect use of JTidy in
+    previous releases. Please update to 0.8.1 or newer.
+		
+-----------------------------------------------------------------------------
+
+Question 6: How do I print or disable custom tags?
+
+Answer:
+ 
+    Custom tags are not printed as long as there is no label defined for 
+	them. See the "Configuration" page or the test.pdf example for how 
+	to specify a label for a custom tag. So, disabling a custom tag can be 
+	done by simply not specifying a label for it.
+		
+-----------------------------------------------------------------------------
+
+Question 7: I get Runtime exceptions '..has no valid destination'
+
+Answer:
+ 
+        This problem was solved with release 0.9.2, so just update to a current release.
+        A little explanation here: The message means that somewhere in the javadoc is
+        a reference to a target that does not exist (at least not in the exact form
+        of that reference). Like a "@see AnyClass#someMethod(String)", where the older
+        PDFDoclet version could not correctly resolve certain anchor formats (with
+        or without parameters etc.).
+		
+-----------------------------------------------------------------------------
+
+Question 8: My embedded font creates some strange characters.
+
+Answer:
+ 
+        The problem lies in finding the correct encoding setting for the font.
+        For Windows-based fonts, try "Cp1252".
+		

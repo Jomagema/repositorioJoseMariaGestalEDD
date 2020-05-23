@@ -1,0 +1,238 @@
+body {
+  padding: 0px 0px 10px 0px;
+}
+body, td, select, input, li {
+  font-family: Verdana, Helvetica, Arial, sans-serif;
+  font-size: 11px;
+}
+
+code {
+  font-family: Courier, monospace;
+  font-size: 14px;
+}
+a {
+  text-decoration: none;
+}
+a:link {
+  color: rgb(195,20,25);
+}
+a:visited  {
+  color: rgb(195,20,25);
+}
+a:active, a:hover {
+  color: rgb(195,20,25);
+}
+#legend li.externalLink {
+  background: url(../images/external.png) left top no-repeat;
+  padding-left: 18px;
+}
+a.externalLink, a.externalLink:link, a.externalLink:visited, a.externalLink:active, a.externalLink:hover {
+  background: url(../images/external.png) right center no-repeat;
+  padding-right: 18px;
+}
+#legend li.newWindow {
+  background: url(../images/newwindow.png) left top no-repeat;
+  padding-left: 18px;
+}
+a.newWindow, a.newWindow:link, a.newWindow:visited, a.newWindow:active, a.newWindow:hover {
+  background: url(../images/newwindow.png) right center no-repeat;
+  padding-right: 18px;
+}
+h2 {
+  margin-top: 5px;
+  padding: 3px 3px 3px 3px;
+  border: 1px solid #999;
+  color: black;
+  background-color: rgb(164,171,122);
+  font-weight: bold;
+  font-size: 15px;
+  margin-bottom: 10px;
+}
+h3 {
+  margin-top: 5px;
+  margin-bottom: 5px;
+  padding: 4px 4px 4px 6px;
+  border: 1px solid #aaa;
+  color: black;
+  background-color: rgb(203,207,179);
+  font-weight: bold;
+  font-size: 13px;
+}
+h4 {
+  margin-top: 5px;
+  margin-bottom: 5px;
+  padding: 4px 4px 4px 6px;
+  border: 1px solid #bbb;
+  color: black;
+  background-color: rgb(229,231,217);
+  font-weight: bold;
+  font-size: 11px;
+}
+h5 {
+  margin-top: 5px;
+  margin-bottom: 5px;
+  padding: 4px 4px 4px 6px;
+  color: black;
+  font-size: normal;
+}
+p {
+  line-height: 1.3em;
+}
+#breadcrumbs {
+  border-top: 1px solid #aaa;
+  border-bottom: 1px solid #aaa;
+  background-color: rgb(203,207,179);
+}
+#leftColumn {
+  margin: 10px 0 0 5px;
+  border: 1px solid #999;
+  background-color: rgb(229,231,217);
+}
+#navcolumn h5 {
+  font-size: smaller;
+  border-bottom: 1px solid #aaaaaa;
+  padding-top: 2px;
+  color: #000;
+}
+
+table.bodyTable th {
+  color: white;
+  background-color: #bbb;
+  text-align: left;
+  font-weight: bold;
+}
+
+table.bodyTable th, table.bodyTable td {
+  font-size: 1em;
+}
+
+table.bodyTable tr.a {
+  background-color: #ddd;
+}
+
+table.bodyTable tr.b {
+  background-color: #eee;
+}
+
+.source {
+  font-size: 12px;
+  border: 1px solid #999;
+}
+dl {
+  padding: 4px 4px 4px 6px;
+  border: 1px solid #aaa;
+  background-color: #ffc;
+}
+dt {
+  color: black;
+}
+#organizationLogo img, #projectLogo img, #projectLogo span{
+  margin: 8px;
+}
+#banner {
+  padding:10px;
+}
+
+#bannerLeft {
+  font-size: 22px;
+}
+
+
+div.errormark, div.warningmark, div.donemark, div.infomark {
+	margin: 10px 10px 10px 10px;
+	background-position: 5px 5px;
+	border: 1px dotted silver;
+	padding-top: 10px;
+	padding-bottom: 10px;
+	padding-left: 30px;
+}
+
+
+.errormark, .warningmark, .donemark, .infomark {
+  background: url(../images/icon_error_sml.gif) no-repeat;
+}
+
+.warningmark {
+  background-image: url(../images/icon_warning_sml.gif);
+}
+
+.donemark {
+  background-image: url(../images/icon_success_sml.gif);
+}
+
+.infomark {
+  background-image: url(../images/icon_info_sml.gif);
+}
+
+
+
+.highlightBox {
+    width: 240px;
+    float: right;
+    clear: right;
+    display: block;
+    background-color: #EEEEEE;
+    margin: 0px 0px 20px 20px;
+    padding: 5px;
+    border-width: 1px;
+    border-style: solid;
+    border-color: #909090;
+}
+
+.highlightBox h5 {
+    margin: 0;
+    padding: 0;
+    color: #000000;
+    font-size: smaller;
+    border-width: 0px 0px 1px 0px;
+    border-style: solid;
+    border-color: #909090;
+}
+
+.highlightBox p {
+    margin: 1em 0 0.5em 0;
+    padding: 0;
+    font-size: smaller;
+}
+
+.highlightBox ul {
+    margin-top: 0;
+    margin-bottom: 1em;
+    list-style-type: square;
+}
+
+.highlightBox li {
+    margin: 0;
+    padding: 0;
+    font-size: smaller;
+}
+
+#contentBox dl {
+  padding: 4px 4px 4px 6px;
+  border: none;
+  background-color: #ffffff;
+}
+#contentBox dt {
+  margin-top: 5px;
+  margin-bottom: 5px;
+  padding: 4px 4px 4px 6px;
+  border: 1px solid #aaa;
+  color: black;
+  background-color: rgb(203,207,179);
+  font-weight: bold;
+  font-size: 13px;
+}
+
+#contentBox dd {
+  margin-top: 5px;
+  margin-bottom: 5px;
+  padding: 4px 4px 4px 6px;
+  color: black;
+}
+#contentBox dd hr {
+  color:silver;
+  margin-right:0px;
+  text-align:right;
+  border:.25px dotted silver;
+}
+

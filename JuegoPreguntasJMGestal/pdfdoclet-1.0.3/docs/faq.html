@@ -1,0 +1,294 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+
+
+
+
+
+
+
+
+
+<html>
+  <head>
+    <title>pdfdoclet - FAQ</title>
+    <style type="text/css" media="all">
+      @import url("./css/maven-base.css");
+      @import url("./css/maven-theme.css");
+      @import url("./css/site.css");
+    </style>
+    <link rel="stylesheet" href="./css/print.css" type="text/css" media="print" />
+          <meta name="author" content="Marcel Schoen" />
+        <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1" />
+      </head>
+  <body class="composite">
+    <table id="bannertable" cellpadding="0" cellspacing="0" width="100%">
+    	<tr>
+    		<td><div id="banner">
+    			<h1><a href="http://sourceforge.net/projects/pdfdoclet/">PDFDoclet</a></h1>
+      			</div>
+      		</td>
+      		<td align="right">
+      		 	      			<img src="./images/sponsored_by_usp.jpg" alt="united security providers Logs" />
+			</td>
+		</tr>
+	</table>
+
+
+      <div class="clear">
+        <hr/>
+      </div>
+    </div>
+    <div id="breadcrumbs">
+          
+  
+
+  
+    
+  
+  
+            <div class="xleft">
+        Last Published: 11/03/2013
+                      </div>
+            <div class="xright">      <a href="links.html">Links</a>
+          
+  
+
+  
+    
+  
+  
+  </div>
+      <div class="clear">
+        <hr/>
+      </div>
+    </div>
+    <div id="leftColumn">
+      <div id="navcolumn">
+           
+  
+
+  
+    
+  
+  
+                   <h5>Usage</h5>
+        <ul>
+              
+    <li class="none">
+              <a href="running.html">Running PDFDoclet</a>
+        </li>
+          </ul>
+          <h5>Usage</h5>
+        <ul>
+              
+    <li class="none">
+              <a href="running.html">Running PDFDoclet</a>
+        </li>
+              
+    <li class="none">
+              <a href="configuration.html">Configuration</a>
+        </li>
+              
+    <li class="none">
+              <a href="titlepage.html">Title Page</a>
+        </li>
+              
+    <li class="none">
+              <a href="appendices.html">Appendices</a>
+        </li>
+              
+    <li class="none">
+              <a href="bookmarks.html">Bookmarks</a>
+        </li>
+              
+    <li class="none">
+              <a href="overview.html">Overview</a>
+        </li>
+              
+    <li class="none">
+              <a href="customtags.html">Custom Tags</a>
+        </li>
+              
+    <li class="none">
+              <a href="filtering.html">Filtering</a>
+        </li>
+              
+    <li class="none">
+              <a href="printing.html">Printing</a>
+        </li>
+              
+    <li class="none">
+              <a href="fonts.html">Fonts</a>
+        </li>
+          </ul>
+          <h5>Miscellaneous</h5>
+        <ul>
+              
+    <li class="none">
+              <a href="features.html">Features</a>
+        </li>
+              
+    <li class="none">
+              <a href="htmltags.html">Supported Tags</a>
+        </li>
+              
+    <li class="none">
+              <a href="samples.html">Examples</a>
+        </li>
+              
+    <li class="none">
+              <a href="todo.html">Todo</a>
+        </li>
+              
+    <li class="none">
+              <strong>FAQ</strong>
+        </li>
+              
+    <li class="none">
+              <a href="credits.html">Credits</a>
+        </li>
+              
+    <li class="none">
+              <a href="build-information.html">Build information</a>
+        </li>
+          </ul>
+                                       <a href="http://maven.apache.org/" title="Built by Maven" id="poweredBy">
+            <img alt="Built by Maven" src="./images/logos/maven-feather.png"></img>
+          </a>
+                       
+  
+
+  
+    
+  
+  
+        </div>
+    </div>
+    <div id="bodyColumn">
+      <div id="contentBox">
+        <meta name="keyword" content="java, maven, build"><div class="section"><h2><a name="Frequently_Asked_Questions"></a>Frequently Asked Questions</h2>
+<ul><li><a href="#question0"><problem name="number_0">PDFDoclet crashes, or hangs. What should I do?</problem></a></li>
+<li><a href="#question1"><problem name="number_1">My HTML-tags are not handled correctly (or at all). Why?</problem></a></li>
+<li><a href="#question2"><problem name="number_2">How do I use the doclet in a shell script?</problem></a></li>
+<li><a href="#question3"><problem name="number_3">My image files are not found (for the image tag).</problem></a></li>
+<li><a href="#question4"><problem name="number_4">The blank space character between two tags gets lost</problem></a></li>
+<li><a href="#question5"><problem name="number_5">How do I print or disable custom tags?</problem></a></li>
+<li><a href="#question6"><problem name="number_6">I get Runtime exceptions '..has no valid destination'</problem></a></li>
+<li><a href="#question7"><problem name="number_7">My embedded font creates some strange characters.</problem></a></li>
+</ul>
+<div class="section"><h3><a name="PDFDoclet_crashes_or_hangs._What_should_I_do"></a>PDFDoclet crashes, or hangs. What should I do?</h3>
+<solution name="number_0" text="PDFDoclet crashes, or hangs. What should I do?"><a name="question0"></a><p><p></p>
+
+	If you happen to find a bug in PDFDoclet, it's likely to be some
+	javadoc-feature that has not been implemented correctly or
+	not at all in PDFDoclet. In that case, see if you can reproduce
+	the problem, and if you can nail it down to a certain part of
+	your Java sourcecodes. Then submit a bug entry in the
+	SourceForge project bug tracking database:
+	</p>
+<p><p></p>
+<a class="externalLink" href="https://sourceforge.net/tracker/?group_id=55507&amp;atid=477255">https://sourceforge.net/tracker/?group_id=55507&amp;atid=477255</a></p>
+<p><p></p>
+
+	Describe your findings as detailled as possible, and attach
+	any files that may be useful in fixing the bug (the logfile,
+	your source files etc.).
+		</p>
+</solution></div>
+<div class="section"><h3><a name="My_HTML-tags_are_not_handled_correctly_or_at_all._Why"></a>My HTML-tags are not handled correctly (or at all). Why?</h3>
+<solution name="number_1" text="My HTML-tags are not handled correctly (or at all). Why?"><a name="question1"></a><p><p></p>
+
+    Some HTML tags are simply not supported at all (yet),
+    as it is quite complicated to create appropriate PDF objects
+    for certain complicated HTML code. This might be implemented
+    in future versions. If this is really a must-have for your project,
+	check out other PDF-generating doclets (see the links page
+	on the PDFDoclet website).
+		</p>
+</solution></div>
+<div class="section"><h3><a name="How_do_I_use_the_doclet_in_a_shell_script"></a>How do I use the doclet in a shell script?</h3>
+<solution name="number_2" text="How do I use the doclet in a shell script?"><a name="question2"></a><p><p></p>
+
+    Check out the &quot;binaries&quot; package. It contains examples for
+    using the doclet both with shell scripts or with ANT.
+		</p>
+</solution></div>
+<div class="section"><h3><a name="My_image_files_are_not_found_for_the_image_tag."></a>My image files are not found (for the image tag).</h3>
+<solution name="number_3" text="My image files are not found (for the image tag)."><a name="question3"></a><p><p></p>
+
+    Use the &quot;-workdir&quot; configuration parameter (or the &quot;workdir&quot;
+    configuration property in the config file). Use it to set the start
+    path of the doclet for looking for external files to the path
+    relative to which your image can be found, as you specified
+    it in the &quot;&lt;img&gt;&quot; tag. Take a look at the example &quot;test-pdf&quot;
+    in the &quot;example/src3&quot; directory.
+
+    If the working directory is not specified, it's just &quot;.&quot;.
+
+    Please note that the tag {@docRoot} at the beginning of a file
+    path specification will just be replaced with the value of the
+    working directory.
+</p>
+</solution></div>
+<div class="section"><h3><a name="The_blank_space_character_between_two_tags_gets_lost"></a>The blank space character between two tags gets lost</h3>
+<solution name="number_4" text="The blank space character between to tags gets lost"><a name="question4"></a><p><p></p>
+
+    This problem has been solved with release 0.8.1 of PDFDoclet. 
+    The reason for this problem has been an incorrect use of JTidy in
+    previous releases. Please update to 0.8.1 or newer.
+		</p>
+</solution></div>
+<div class="section"><h3><a name="How_do_I_print_or_disable_custom_tags"></a>How do I print or disable custom tags?</h3>
+<solution name="number_5" text="How do I print or disable custom tags?"><a name="question5"></a><p><p></p>
+
+    Custom tags are not printed as long as there is no label defined for 
+	them. See the &quot;Configuration&quot; page or the test.pdf example for how 
+	to specify a label for a custom tag. So, disabling a custom tag can be 
+	done by simply not specifying a label for it.
+		</p>
+</solution></div>
+<div class="section"><h3><a name="I_get_Runtime_exceptions_..has_no_valid_destination"></a>I get Runtime exceptions '..has no valid destination'</h3>
+<solution name="number_6" text="I get Runtime exceptions '..has no valid destination'"><a name="question6"></a><p><p></p>
+
+        This problem was solved with release 0.9.2, so just update to a current release.
+        A little explanation here: The message means that somewhere in the javadoc is
+        a reference to a target that does not exist (at least not in the exact form
+        of that reference). Like a &quot;@see AnyClass#someMethod(String)&quot;, where the older
+        PDFDoclet version could not correctly resolve certain anchor formats (with
+        or without parameters etc.).
+		</p>
+</solution></div>
+<div class="section"><h3><a name="My_embedded_font_creates_some_strange_characters."></a>My embedded font creates some strange characters.</h3>
+<solution name="number_7" text="My embedded font creates some strange characters."><a name="question7"></a><p><p></p>
+
+        The problem lies in finding the correct encoding setting for the font.
+        For Windows-based fonts, try &quot;Cp1252&quot;.
+		</p>
+</solution></div>
+</div>
+
+      </div>
+    </div>
+    <div class="clear">
+      <hr/>
+    </div>
+    <div id="footer">
+      <div class="xright">&#169;  
+          2013
+    
+          PDFDoclet
+          
+  
+
+  
+    
+  
+  
+  </div>
+      <div class="clear">
+        <hr/>
+      </div>
+    </div>
+  </body>
+</html>

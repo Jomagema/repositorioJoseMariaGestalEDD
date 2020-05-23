@@ -1,0 +1,235 @@
+<html>
+<head>
+<title>Untitled Document</title>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+</head>
+
+<body bgcolor="#FFFFFF">
+
+<p>An overview of the JLaby
+<p>and an image<img src="doc-files/Beispiel.jpg"/>
+<!-- NEWPAGE -->
+
+	<a name="pdfbookmark" label="Lists"></a>
+<p>
+A definition list:
+<dl>
+  <dt>This is the first term
+  <dd>This is some text belonging to that term.
+  <dt><b>This is the second term, bold</b>
+  <dd>This is some text belonging to that term.
+  <dt><strong>This is the third, strong term</strong>
+  <dd>This is some text belonging to that term.
+</dl>
+A simple bullet list:
+<ul>
+  <li>The first element</li>
+  <li>The second element</li>
+</ul>
+Now an ordered list with unclosed list tags:
+<ol>
+  <li>The first element
+  <li>The second element
+</ol>
+	
+<p>And a HR line<hr>
+	
+Then some nested lists:
+
+<ul>
+  <li>Outer unordered list, first element
+    <ol>
+      <li>Nested ordered list, first element
+      <li>Nested ordered list, some <b>bold text </b>in the second element
+    </ol>
+  </li>
+  <li>And now a nested ordered list:
+    <ol>
+      <li>Nested ordered list, this {@linkplain com.test.TestClass link} points to LabyAction</li>
+      <li>Nested ordered list, and an external link to the <a href="http://www.yahoo.com">Yahoo </a>website.</li>
+    </ol>
+  </li>
+</ul>
+	
+<p>Then another HR line<hr>
+	
+<ol>
+	<li>First entry is nested bullet list
+		<ul>
+			<li>Bullet point one</li>
+			<li>Bullet point two</li>
+		</ul>
+    </li>
+	<li>Second entry is nested ordered list
+		<ul>
+			<li>Number one</li>
+			<li>Number two</li>
+		</ul>
+    </li>
+</ol>
+
+Now, this is a <a href="#anchor_one">link to anchor one</a>, while 
+this is an <a href="#anchor_two">invalid link</a>
+to a non-existent anchor. Because the target anchor does
+not exist, the link leads to the last page of the document instead.
+
+<p>
+Now ordered lists of different type:
+<ul>
+	<li>Type "a"
+<ol type=a>
+	<li>Entry one</li>
+	<li>Entry two</li>
+</ol>
+</li>
+	<li>Type "i"
+<ol type=i>
+	<li>Entry one</li>
+	<li>Entry two</li>
+</ol>
+</li>
+	<li>Type "l"
+<ol type=l>
+	<li>Entry one</li>
+	<li>Entry two</li>
+</ol>
+</li>
+</ul>
+<p>
+Try a member method link: {@link com.test.TestClass#getFormattedText com.test.TestClass.getFormattedText()}<br>
+Try a member variable link: {@link com.test.ITestInterface#WEST com.test.ITestInterface.WEST}<br>
+<p>
+<h4><a name="anchor_one">Anchor one</a></h4>
+Here, a page break is enforced by inserting a specific comment into the HTML code.
+<p>
+<!-- NEWPAGE -->
+<h3>Table support</h3>
+<h4>Coloured, right aligned table</h4>
+<table width="90" align="right" bgcolor="#FFCCCC" border="1" cellpadding="6" cellspacing="5">
+	<tr><th>header 1</th><th>header 2</th></tr>
+	<tr><td>cell 1</td><td>cell 2</td></tr>
+	<tr><td colspan="2">spanning cell</td></tr>
+	<tr><td colspan="2">A nested table:
+		<table border="2" bgcolor="#CCCCFF" cellpadding="3" cellspacing="2">
+			<tr><td>inner cell 1</td><td>inner cell 2</td><td>inner cell 3</td></tr>
+			<tr><td>inner cell 1</td><td bgcolor="#FFFF44">AND A YELLOW CELL</td><td>inner cell 3</td></tr>
+			<tr><td>inner cell 1</td><td>inner cell 2</td><td>inner cell 3</td></tr>
+			<tr><td>inner cell with list:<ul><li>one</li><li>two</li></ul></td><td>inner cell 2</td><td>inner cell 3</td></tr>
+		</table>
+	</td></tr>
+</table>
+<h4>A very large, page-breaking table</h4>
+Note that the header cells are repeated automatically on a new page.
+<table width="100" align="left" border="1"  cellpadding="3" cellspacing="2">
+	<tr><th bgcolor="#DDDDDD">header 1</th><th bgcolor="#DDDDDD">header 2</th></tr>
+	<tr><td>cell 1</td><td>cell 2</td></tr>
+	<tr><td>cell 1</td><td>cell 2</td></tr>
+	<tr><td>cell 1</td><td>cell 2</td></tr>
+	<tr><td>cell 1</td><td>cell 2</td></tr>
+	<tr><td>cell 1</td><td>cell 2</td></tr>
+	<tr><td>cell 1</td><td>cell 2</td></tr>
+	<tr><td>cell 1</td><td>cell 2</td></tr>
+	<tr><td>cell 1</td><td>cell 2</td></tr>
+	<tr><td>cell 1</td><td>cell 2</td></tr>
+	<tr><td>cell 1</td><td>cell 2</td></tr>
+	<tr><td>cell 1</td><td>cell 2</td></tr>
+	<tr><td>cell 1</td><td>cell 2</td></tr>
+	<tr><td>cell 1</td><td>cell 2</td></tr>
+	<tr><td>cell 1</td><td>cell 2</td></tr>
+	<tr><td>cell 1</td><td>cell 2</td></tr>
+	<tr><td>cell 1</td><td>cell 2</td></tr>
+	<tr><td>cell 1</td><td>cell 2</td></tr>
+	<tr><td>cell 1</td><td>cell 2</td></tr>
+	<tr><td>cell 1</td><td>cell 2</td></tr>
+	<tr><td>cell 1</td><td>cell 2</td></tr>
+	<tr><td>cell 1</td><td>cell 2</td></tr>
+	<tr><td>cell 1</td><td>cell 2</td></tr>
+	<tr><td>cell 1</td><td>cell 2</td></tr>
+	<tr><td>cell 1</td><td>cell 2</td></tr>
+	<tr><td>cell 1</td><td>cell 2</td></tr>
+	<tr><td>cell 1</td><td>cell 2</td></tr>
+	<tr><td>cell 1</td><td>cell 2</td></tr>
+	<tr><td>cell 1</td><td>cell 2</td></tr>
+	<tr><td>cell 1</td><td>cell 2</td></tr>
+	<tr><td>cell 1</td><td>cell 2</td></tr>
+	<tr><td>cell 1</td><td>cell 2</td></tr>
+	<tr><td>cell 1</td><td>cell 2</td></tr>
+	<tr><td>cell 1</td><td>cell 2</td></tr>
+	<tr><td>cell 1</td><td>cell 2</td></tr>
+	<tr><td>cell 1</td><td>cell 2</td></tr>
+	<tr><td>cell 1</td><td>cell 2</td></tr>
+	<tr><td>cell 1</td><td>cell 2</td></tr>
+	<tr><td>cell 1</td><td>cell 2</td></tr>
+	<tr><td>cell 1</td><td>cell 2</td></tr>
+	<tr><td>cell 1</td><td>cell 2</td></tr>
+	<tr><td>cell 1</td><td>cell 2</td></tr>
+	<tr><td>cell 1</td><td>cell 2</td></tr>
+	<tr><td>cell 1</td><td>cell 2</td></tr>
+	<tr><td>cell 1</td><td>cell 2</td></tr>
+	<tr><td>cell 1</td><td>cell 2</td></tr>
+	<tr><td>cell 1</td><td>cell 2</td></tr>
+	<tr><td>cell 1</td><td>cell 2</td></tr>
+	<tr><td>cell 1</td><td>cell 2</td></tr>
+	<tr><td>cell 1</td><td>cell 2</td></tr>
+	<tr><td>cell 1</td><td>cell 2</td></tr>
+	<tr><td>cell 1</td><td>cell 2</td></tr>
+	<tr><td>cell 1</td><td>cell 2</td></tr>
+	<tr><td>cell 1</td><td>cell 2</td></tr>
+</table>
+
+<!-- NEWPAGE -->
+    <a name="pdfbookmark" label="Links"></a>
+<h3>Link Examples</h3>
+A <a href="./com/other/package-summary.html">link to a package</a>.
+<p>
+A <a href="./doc-files/some-other-file.html">link to an appendix file.</a>.
+<p>
+A <a href="./doc-files/lcdscreen.pdf">link to a PDF appendix file.</a>.
+<p>
+A <a href="./doc-files/projectinfo.pdf">link to another PDF appendix file.</a>.
+<p>
+Some regular body text here, some regular body text here, some regular body text here, some
+regular body text here, some regular body text here, some regular body text here, some regular body text here.
+</p>
+<h1>Heading 1</h1>
+Some regular body text here, some regular body text here, some regular body text here, some
+regular body text here, some regular body text here, some regular body text here, some regular body text here.
+<h2>Heading 2</h2>
+Some regular body text here, some regular body text here, some regular body text here, some
+regular body text here, some regular body text here, some regular body text here, some regular body text here.
+<h3>Heading 3</h3>
+Some regular body text here, some regular body text here, some regular body text here, some
+regular body text here, some regular body text here, some regular body text here, some regular body text here.
+<h4>Heading 4</h4>
+Some regular body text here, some regular body text here, some regular body text here, some
+regular body text here, some regular body text here, some regular body text here, some regular body text here.
+<h5>Heading 5</h5>
+Some regular body text here, some regular body text here, some regular body text here, some
+regular body text here, some regular body text here, some regular body text here, some regular body text here.
+
+<!-- NEWPAGE -->
+    <a name="pdfbookmark" label="Preformatted Text"></a>
+<h3>Preformatted Text</h3>
+A <a href="./com/other/package-summary.html">link to a package</a>, and then comes a preformatted text region:
+<pre>String permission = ...
+ConfigurationProvider cp = &lt;ConfigurationProvider&gt;
+UserDataProvider up = &lt;UserDataProvider&gt;
+SecurityConfiguration sc = SecurityConfiguration.getInstance(permission, cp, up);
+Security security = SecurityFactory.getInstance(sc)
+Ticket ticket = security.getTicket(&lt;Permission(permission)&gt;);</pre>
+<p>
+And more text...
+<p>And now an inline link to class {@link com.test.TestClass com.test.TestClass} and an 
+inline &lt;a href&gt; <a href="http://www.yahoo.com">Yahoo </a>web URL link.
+<p>Font modifiers: <em>emphasized</em>, <s>strike</s>, <strike>strike again</strike>, <b>bold</b>, <u>underline</u>, <i>italic</i>, <code>code</code>, 
+<b><i>italic bold</i></b>, and mixed up: <b>bold and <i>italic </i>is pretty <u>cool</u>, man.</b><p>
+And special characters: &auml;, &uuml;, &ouml;, &Auml;, &Uuml;, &Ouml;, &szlig;, &amp;, &quot;, &gt;, &lt;
+<h3>Preformatted Text With Font Modifiers</h3>
+<pre>String permission = ...
+ConfigurationProvider <b>cp</b> = &lt;ConfigurationProvider&gt;
+UserDataProvider <b>up</b> = &lt;UserDataProvider&gt;
+<s>SecurityConfiguration sc = SecurityConfiguration.getInstance(permission, cp, up);</s>
+Security <i>security</i> = <i>SecurityFactory.getInstance(sc)</i>
+Ticket ticket = security.getTicket(&lt;Permission(permission)&gt;);</pre>
+</body>
+</html>

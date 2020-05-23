@@ -1,0 +1,228 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+
+
+
+
+
+
+
+
+
+<html>
+  <head>
+    <title>pdfdoclet - Features</title>
+    <style type="text/css" media="all">
+      @import url("./css/maven-base.css");
+      @import url("./css/maven-theme.css");
+      @import url("./css/site.css");
+    </style>
+    <link rel="stylesheet" href="./css/print.css" type="text/css" media="print" />
+          <meta name="author" content="Marcel Schoen" />
+        <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1" />
+      </head>
+  <body class="composite">
+    <table id="bannertable" cellpadding="0" cellspacing="0" width="100%">
+    	<tr>
+    		<td><div id="banner">
+    			<h1><a href="http://sourceforge.net/projects/pdfdoclet/">PDFDoclet</a></h1>
+      			</div>
+      		</td>
+      		<td align="right">
+      		 	      			<img src="./images/sponsored_by_usp.jpg" alt="united security providers Logs" />
+			</td>
+		</tr>
+	</table>
+
+
+      <div class="clear">
+        <hr/>
+      </div>
+    </div>
+    <div id="breadcrumbs">
+          
+  
+
+  
+    
+  
+  
+            <div class="xleft">
+        Last Published: 11/03/2013
+                      </div>
+            <div class="xright">      <a href="links.html">Links</a>
+          
+  
+
+  
+    
+  
+  
+  </div>
+      <div class="clear">
+        <hr/>
+      </div>
+    </div>
+    <div id="leftColumn">
+      <div id="navcolumn">
+           
+  
+
+  
+    
+  
+  
+                   <h5>Usage</h5>
+        <ul>
+              
+    <li class="none">
+              <a href="running.html">Running PDFDoclet</a>
+        </li>
+          </ul>
+          <h5>Usage</h5>
+        <ul>
+              
+    <li class="none">
+              <a href="running.html">Running PDFDoclet</a>
+        </li>
+              
+    <li class="none">
+              <a href="configuration.html">Configuration</a>
+        </li>
+              
+    <li class="none">
+              <a href="titlepage.html">Title Page</a>
+        </li>
+              
+    <li class="none">
+              <a href="appendices.html">Appendices</a>
+        </li>
+              
+    <li class="none">
+              <a href="bookmarks.html">Bookmarks</a>
+        </li>
+              
+    <li class="none">
+              <a href="overview.html">Overview</a>
+        </li>
+              
+    <li class="none">
+              <a href="customtags.html">Custom Tags</a>
+        </li>
+              
+    <li class="none">
+              <a href="filtering.html">Filtering</a>
+        </li>
+              
+    <li class="none">
+              <a href="printing.html">Printing</a>
+        </li>
+              
+    <li class="none">
+              <strong>Fonts</strong>
+        </li>
+          </ul>
+          <h5>Miscellaneous</h5>
+        <ul>
+              
+    <li class="none">
+              <a href="features.html">Features</a>
+        </li>
+              
+    <li class="none">
+              <a href="htmltags.html">Supported Tags</a>
+        </li>
+              
+    <li class="none">
+              <a href="samples.html">Examples</a>
+        </li>
+              
+    <li class="none">
+              <a href="todo.html">Todo</a>
+        </li>
+              
+    <li class="none">
+              <a href="faq.html">FAQ</a>
+        </li>
+              
+    <li class="none">
+              <a href="credits.html">Credits</a>
+        </li>
+              
+    <li class="none">
+              <a href="build-information.html">Build information</a>
+        </li>
+          </ul>
+                                       <a href="http://maven.apache.org/" title="Built by Maven" id="poweredBy">
+            <img alt="Built by Maven" src="./images/logos/maven-feather.png"></img>
+          </a>
+                       
+  
+
+  
+    
+  
+  
+        </div>
+    </div>
+    <div id="bodyColumn">
+      <div id="contentBox">
+        <meta name="keyword" content="java, maven, build"><div class="section"><h2><a name="Fonts"></a>Fonts</h2>
+<p><p></p>
+It is possible to embed custom TrueType fonts into a PDF file.
+	However, some fonts may not be embeddable due to copyright restrictions.
+	In such cases, PDFDoclet usually stops processing with an error message
+	pointing to the source of the problem.
+	</p>
+<p><p></p>
+Currently, only two custom fonts can be embedded, one replacing
+	the standard text font and the other the standard fixed font (for
+	preformatted text parts).</p>
+<p><p></p>
+Configure the standard text font like this:</p>
+<pre>
+        font.text.name=&lt;relative path of .ttf file&gt;
+        # optional: define encoding of font
+        font.text.enc=&lt;encoding&gt;
+	</pre><p><p></p>
+For example</p>
+<pre>
+        font.text.name=fonts/Windows/Vera.ttf
+        font.text.enc=UTF-8
+	</pre><p><p></p>
+Configure the standard preformatted (fixed-with) font like this:</p>
+<pre>
+        font.code.name=&lt;relative path of .ttf file&gt;
+        # optional: define encoding of font
+        font.code.enc=&lt;encoding&gt;
+	</pre><p><p></p>
+For example</p>
+<pre>
+        font.code.name=fonts/SF Arch Rival v1.0/SF Arch Rival.ttf
+        font.code.enc=UTF-8
+	</pre></div>
+
+      </div>
+    </div>
+    <div class="clear">
+      <hr/>
+    </div>
+    <div id="footer">
+      <div class="xright">&#169;  
+          2013
+    
+          PDFDoclet
+          
+  
+
+  
+    
+  
+  
+  </div>
+      <div class="clear">
+        <hr/>
+      </div>
+    </div>
+  </body>
+</html>

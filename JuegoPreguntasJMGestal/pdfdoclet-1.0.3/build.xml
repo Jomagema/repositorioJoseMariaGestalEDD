@@ -1,0 +1,122 @@
+<project name="pdfdoclet-example" default="build" basedir=".">
+
+    <!-- ************************************************************************ -->
+    <!-- Configuration properties                                                 -->
+    <!-- ************************************************************************ -->
+
+    <property name="jar.dir"  value="${basedir}/jar" />
+    <property name="example.dir"  value="${basedir}/example" />
+
+
+    <!-- project name above is available in property "ant.project.name" -->
+    <property name="project.name" value="${ant.project.name}"/>
+    <!-- 
+    <property name="version.id" value="@VERSION-ID@"/>
+     -->
+
+    <!-- name of the java library -->
+    <property name="library.name" value="pdfdoclet"/>
+
+    <!-- javadoc example packages     -->
+    <property name="javadoc.laby.packages" value="com.jlaby.*" /> 
+    <property name="javadoc.html.packages" value="cvu.*" />
+    <property name="javadoc.test.packages" value="com.test.*,com.other.*" />
+
+    <!-- 3rt party libraries                         -->
+    <property name="pdfdoclet.lib" value="pdfdoclet-1.0.3-SNAPSHOT-all.jar" />
+
+    <!-- ************************************************************************ -->
+    <!-- Create the example PDF files                                             -->
+    <!-- ************************************************************************ -->
+
+    <target name="build" description="Builds all PDF files."
+            depends="example,test-pdf" />
+            
+    <target name="example" description="Creates two example PDF files.">
+
+        <delete dir="${example.dir}/results"/>
+        <mkdir dir="${example.dir}/results/html" />
+        <mkdir dir="${example.dir}/results/laby" />
+
+        <!-- Create the PDF javadoc first...                                -->
+        <javadoc doclet="com.tarsec.javadoc.pdfdoclet.PDFDoclet"
+            docletpath="${jar.dir}/${pdfdoclet.lib}"
+        	overview="${example.dir}/laby/overview_laby.html"
+            packagenames="${javadoc.laby.packages}"
+            additionalparam="-pdf ${example.dir}/results/laby.pdf -debug -config ${example.dir}/laby/config_laby.properties"
+            private="no">
+            <sourcepath>
+                <pathelement location="${example.dir}/laby"/>
+            </sourcepath>
+        </javadoc>
+
+        <!-- ...and the HTML javadoc afterwards, to allow for comparison    -->
+        <javadoc
+            packagenames="${javadoc.laby.packages}"
+        	overview="${example.dir}/laby/overview_laby.html"
+            destDir="${example.dir}/results/laby"
+            private="no">
+            <sourcepath>
+                <pathelement location="${example.dir}/laby"/>
+            </sourcepath>
+        </javadoc>
+
+
+        <!-- Create the PDF javadoc first...                                -->
+        <javadoc doclet="com.tarsec.javadoc.pdfdoclet.PDFDoclet"
+            docletpath="${jar.dir}/${pdfdoclet.lib}"
+            packagenames="${javadoc.html.packages}"
+            additionalparam="-pdf ${example.dir}/results/html.pdf -config ${example.dir}/html/config_html.properties"
+            private="no">
+            <sourcepath>
+                <pathelement location="${example.dir}/html"/>
+            </sourcepath>
+        </javadoc>
+
+        <!-- ...and the HTML javadoc afterwards, to allow for comparison    -->
+        <javadoc
+            packagenames="${javadoc.html.packages}"
+            destDir="${example.dir}/results/html"
+            private="no">
+            <sourcepath>
+                <pathelement location="${example.dir}/html"/>
+            </sourcepath>
+        </javadoc>
+
+        <echo message="The PDF files should have been created in ${example.dir}/results." />
+
+    </target>
+
+    <!-- ************************************************************************ -->
+    <!-- Create the small test PDF file                                           -->
+    <!-- ************************************************************************ -->
+
+    <target name="test-pdf" description="Creates small test PDF file.">
+        <mkdir dir="${example.dir}/results/test" />
+
+        <!-- Create the PDF javadoc first...                                -->
+        <javadoc doclet="com.tarsec.javadoc.pdfdoclet.PDFDoclet"
+            docletpath="${jar.dir}/${pdfdoclet.lib}"
+            packagenames="${javadoc.test.packages}"
+        	overview="${example.dir}/test/overview.html"
+            sourcefiles="${example.dir}/test/com/single/SingleClass.java"
+            sourcepath="${example.dir}/test"
+            additionalparam="-pdf ${example.dir}/results/test.pdf -debug -config ${basedir}/example/test/config_test.properties"
+            private="yes" />
+
+        <!-- ...and the HTML javadoc afterwards, to allow for comparison    -->
+        <mkdir dir="${example.dir}/results/test" />
+        <javadoc
+            packagenames="${javadoc.test.packages}"
+            destDir="${example.dir}/results/test"
+            sourcefiles="${example.dir}/test/com/single/SingleClass.java"
+        	overview="${example.dir}/test/overview.html"
+            private="yes">
+            <sourcepath>
+                <pathelement location="${example.dir}/test"/>
+            </sourcepath>
+        </javadoc>
+
+    </target>
+
+</project>

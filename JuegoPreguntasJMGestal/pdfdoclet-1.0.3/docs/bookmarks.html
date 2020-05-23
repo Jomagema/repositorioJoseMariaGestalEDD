@@ -1,0 +1,273 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+
+
+
+
+
+
+
+
+
+<html>
+  <head>
+    <title>pdfdoclet - Bookmarks</title>
+    <style type="text/css" media="all">
+      @import url("./css/maven-base.css");
+      @import url("./css/maven-theme.css");
+      @import url("./css/site.css");
+    </style>
+    <link rel="stylesheet" href="./css/print.css" type="text/css" media="print" />
+          <meta name="author" content="Marcel Schoen" />
+        <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1" />
+      </head>
+  <body class="composite">
+    <table id="bannertable" cellpadding="0" cellspacing="0" width="100%">
+    	<tr>
+    		<td><div id="banner">
+    			<h1><a href="http://sourceforge.net/projects/pdfdoclet/">PDFDoclet</a></h1>
+      			</div>
+      		</td>
+      		<td align="right">
+      		 	      			<img src="./images/sponsored_by_usp.jpg" alt="united security providers Logs" />
+			</td>
+		</tr>
+	</table>
+
+
+      <div class="clear">
+        <hr/>
+      </div>
+    </div>
+    <div id="breadcrumbs">
+          
+  
+
+  
+    
+  
+  
+            <div class="xleft">
+        Last Published: 11/03/2013
+                      </div>
+            <div class="xright">      <a href="links.html">Links</a>
+          
+  
+
+  
+    
+  
+  
+  </div>
+      <div class="clear">
+        <hr/>
+      </div>
+    </div>
+    <div id="leftColumn">
+      <div id="navcolumn">
+           
+  
+
+  
+    
+  
+  
+                   <h5>Usage</h5>
+        <ul>
+              
+    <li class="none">
+              <a href="running.html">Running PDFDoclet</a>
+        </li>
+          </ul>
+          <h5>Usage</h5>
+        <ul>
+              
+    <li class="none">
+              <a href="running.html">Running PDFDoclet</a>
+        </li>
+              
+    <li class="none">
+              <a href="configuration.html">Configuration</a>
+        </li>
+              
+    <li class="none">
+              <a href="titlepage.html">Title Page</a>
+        </li>
+              
+    <li class="none">
+              <a href="appendices.html">Appendices</a>
+        </li>
+              
+    <li class="none">
+              <strong>Bookmarks</strong>
+        </li>
+              
+    <li class="none">
+              <a href="overview.html">Overview</a>
+        </li>
+              
+    <li class="none">
+              <a href="customtags.html">Custom Tags</a>
+        </li>
+              
+    <li class="none">
+              <a href="filtering.html">Filtering</a>
+        </li>
+              
+    <li class="none">
+              <a href="printing.html">Printing</a>
+        </li>
+              
+    <li class="none">
+              <a href="fonts.html">Fonts</a>
+        </li>
+          </ul>
+          <h5>Miscellaneous</h5>
+        <ul>
+              
+    <li class="none">
+              <a href="features.html">Features</a>
+        </li>
+              
+    <li class="none">
+              <a href="htmltags.html">Supported Tags</a>
+        </li>
+              
+    <li class="none">
+              <a href="samples.html">Examples</a>
+        </li>
+              
+    <li class="none">
+              <a href="todo.html">Todo</a>
+        </li>
+              
+    <li class="none">
+              <a href="faq.html">FAQ</a>
+        </li>
+              
+    <li class="none">
+              <a href="credits.html">Credits</a>
+        </li>
+              
+    <li class="none">
+              <a href="build-information.html">Build information</a>
+        </li>
+          </ul>
+                                       <a href="http://maven.apache.org/" title="Built by Maven" id="poweredBy">
+            <img alt="Built by Maven" src="./images/logos/maven-feather.png"></img>
+          </a>
+                       
+  
+
+  
+    
+  
+  
+        </div>
+    </div>
+    <div id="bodyColumn">
+      <div id="contentBox">
+        <meta name="keyword" content="java, maven, build"><div class="section"><h2><a name="Bookmarks"></a>Bookmarks</h2>
+<div class="section"><h3><a name="Overview"></a>Overview</h3>
+<p><p></p>
+
+	PDFDoclet allows to create a bookmark outline which makes it easier to access
+	the various parts of the document. The default bookmark outline structure for
+	an API for which an overview and appendices were specified is this:
+	</p>
+<pre>
+        + Title Page
+        + Overview
+        + All Classes
+        + Packages
+        + Appendices
+        + Index
+	</pre><p><p></p>
+
+	Within each package entry, the structure always looks like this:
+	</p>
+<pre>
+        + Package name
+          + Class name
+            + Fields
+            + Constructors
+            + Methods
+	</pre><p><p></p>
+
+	It is possible, however, to change the bookmark structure in various ways, as
+	explained in the following sections.
+	</p>
+</div>
+<div class="section"><h3><a name="Bookmark_Labels"></a>Bookmark Labels</h3>
+<p><p></p>
+
+	The following list shows the configuration properties which can be used to
+	override the default bookmark labels.
+	<pre>
+        label.bookmarks.title=My Title
+        label.bookmarks.index=My Index
+        label.bookmarks.overview=My Overview
+        label.bookmarks.packages=The Packages
+        label.bookmarks.otherPackages=Remaining Packages
+	</pre>
+	The last two properties are mutual exclusive. The last one (&quot;<code>..otherPackages</code>&quot;) 
+	is used only in conjunction with the <code>-group</code> parameter (see next section).
+	</p>
+</div>
+<div class="section"><h3><a name="Bookmark_Grouping"></a>Bookmark Grouping</h3>
+<p><p></p>
+
+	PDFDoclet supports the <code>-group</code> parameter which allows to group certain
+	packages together. See Sun's javadoc for a detailled explanation of this parameter.
+	</p>
+<p><p></p>
+
+	The packages not included in any of the groups are all under a bookmark with the
+	default label &quot;Other Packages&quot;. To override this label, set this property:
+	<pre>
+        label.bookmarks.otherPackages=Remaining Packages
+	</pre></p>
+</div>
+<div class="section"><h3><a name="Custom_Bookmarks"></a>Custom Bookmarks</h3>
+<p><p></p>
+
+	As the example <a class="externalLink" href="http://prdownloads.sourceforge.net/pdfdoclet/examples1.pdf?download">example1.pdf</a> 
+	shows, it is possible to create custom entries in
+	the bookmark outline. This can be achieved with a special kind of HTML anchor
+	in the <code>overview.html</code> or a <code>package.html</code>:
+	<pre>
+        &lt;a name=&quot;pdfbookmark&quot; label=&quot;Text Label&quot;&gt;&lt;/a&gt;
+	</pre>
+	Due to some mysterious behaviour of the HTML parser, it's better to create a 
+	separate opening and closing tag, as shown in this example. Usually it also works
+	if the HTML tag is closed directly, XML-style, but in certain situations, following
+	HTML tags may be turned into links (although they shouldn't). This may be fixed in
+	a future release. For the time being, it is recommended to use this notation.
+	</p>
+</div>
+</div>
+
+      </div>
+    </div>
+    <div class="clear">
+      <hr/>
+    </div>
+    <div id="footer">
+      <div class="xright">&#169;  
+          2013
+    
+          PDFDoclet
+          
+  
+
+  
+    
+  
+  
+  </div>
+      <div class="clear">
+        <hr/>
+      </div>
+    </div>
+  </body>
+</html>

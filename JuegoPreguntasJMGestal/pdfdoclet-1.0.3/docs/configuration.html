@@ -1,0 +1,432 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+
+
+
+
+
+
+
+
+
+<html>
+  <head>
+    <title>pdfdoclet - Configuration</title>
+    <style type="text/css" media="all">
+      @import url("./css/maven-base.css");
+      @import url("./css/maven-theme.css");
+      @import url("./css/site.css");
+    </style>
+    <link rel="stylesheet" href="./css/print.css" type="text/css" media="print" />
+          <meta name="author" content="Marcel Schoen" />
+        <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1" />
+      </head>
+  <body class="composite">
+    <table id="bannertable" cellpadding="0" cellspacing="0" width="100%">
+    	<tr>
+    		<td><div id="banner">
+    			<h1><a href="http://sourceforge.net/projects/pdfdoclet/">PDFDoclet</a></h1>
+      			</div>
+      		</td>
+      		<td align="right">
+      		 	      			<img src="./images/sponsored_by_usp.jpg" alt="united security providers Logs" />
+			</td>
+		</tr>
+	</table>
+
+
+      <div class="clear">
+        <hr/>
+      </div>
+    </div>
+    <div id="breadcrumbs">
+          
+  
+
+  
+    
+  
+  
+            <div class="xleft">
+        Last Published: 11/03/2013
+                      </div>
+            <div class="xright">      <a href="links.html">Links</a>
+          
+  
+
+  
+    
+  
+  
+  </div>
+      <div class="clear">
+        <hr/>
+      </div>
+    </div>
+    <div id="leftColumn">
+      <div id="navcolumn">
+           
+  
+
+  
+    
+  
+  
+                   <h5>Usage</h5>
+        <ul>
+              
+    <li class="none">
+              <a href="running.html">Running PDFDoclet</a>
+        </li>
+          </ul>
+          <h5>Usage</h5>
+        <ul>
+              
+    <li class="none">
+              <a href="running.html">Running PDFDoclet</a>
+        </li>
+              
+    <li class="none">
+              <strong>Configuration</strong>
+        </li>
+              
+    <li class="none">
+              <a href="titlepage.html">Title Page</a>
+        </li>
+              
+    <li class="none">
+              <a href="appendices.html">Appendices</a>
+        </li>
+              
+    <li class="none">
+              <a href="bookmarks.html">Bookmarks</a>
+        </li>
+              
+    <li class="none">
+              <a href="overview.html">Overview</a>
+        </li>
+              
+    <li class="none">
+              <a href="customtags.html">Custom Tags</a>
+        </li>
+              
+    <li class="none">
+              <a href="filtering.html">Filtering</a>
+        </li>
+              
+    <li class="none">
+              <a href="printing.html">Printing</a>
+        </li>
+              
+    <li class="none">
+              <a href="fonts.html">Fonts</a>
+        </li>
+          </ul>
+          <h5>Miscellaneous</h5>
+        <ul>
+              
+    <li class="none">
+              <a href="features.html">Features</a>
+        </li>
+              
+    <li class="none">
+              <a href="htmltags.html">Supported Tags</a>
+        </li>
+              
+    <li class="none">
+              <a href="samples.html">Examples</a>
+        </li>
+              
+    <li class="none">
+              <a href="todo.html">Todo</a>
+        </li>
+              
+    <li class="none">
+              <a href="faq.html">FAQ</a>
+        </li>
+              
+    <li class="none">
+              <a href="credits.html">Credits</a>
+        </li>
+              
+    <li class="none">
+              <a href="build-information.html">Build information</a>
+        </li>
+          </ul>
+                                       <a href="http://maven.apache.org/" title="Built by Maven" id="poweredBy">
+            <img alt="Built by Maven" src="./images/logos/maven-feather.png"></img>
+          </a>
+                       
+  
+
+  
+    
+  
+  
+        </div>
+    </div>
+    <div id="bodyColumn">
+      <div id="contentBox">
+        <meta name="keyword" content="java, maven, build"><div class="section"><h2><a name="Configuration"></a>Configuration</h2>
+<div class="section"><h3><a name="Overview"></a>Overview</h3>
+<p><p></p>
+
+	PDFDoclet should be configured through a property file. This 
+is (IMHO) the clearest and easiest way of maintaining a set 
+of configuration values (instead of using dozens of parameters). 
+However, all settings can also be configured through 
+commandline parameters. 
+</p>
+<p><p></p>
+
+For using a property file, specify the file with the 
+&quot;-config&quot; commandline argument:
+</p>
+<pre>
+  -config &lt;property file path&gt;
+</pre><p><p></p>
+
+All other configuration values can be specified as an argument 
+or in a property file. For example, to print the &quot;author&quot; tag,
+either the commandline argument &quot;-author&quot; may be specified,
+or the property &quot;author&quot; may be set in the config file.
+</p>
+<p><p></p>
+
+Note that all properties with a boolean value (&quot;true&quot;/&quot;yes&quot; 
+or &quot;false&quot;/&quot;no&quot;) DON'T TAKE A VALUE when specified as commandline
+argument. In that case, they are by default assumed to be &quot;true&quot;.
+For example, specifiying &quot;-author&quot; (without a specific value) 
+on the commandline has the same meaning as specifying 
+&quot;author=true&quot; or &quot;author=yes&quot; in the configuration file.
+</p>
+</div>
+<div class="section"><h3><a name="Properties"></a>Properties</h3>
+<p><p></p>
+
+Here is a list of all available configuration properties. The 
+list has been split in two parts: The first lists all simple
+boolean &quot;yes&quot;/&quot;no&quot; properties. The second list shows all the
+properties which need an additional value argument on the 
+command line.
+</p>
+<div class="section"><h3><a name="Boolean_properties_value_yesno"></a>Boolean properties (value &quot;yes&quot;/&quot;no&quot;)</h3>
+<table class="bodyTable"><tr class="a"><th>Property</th>
+<th>Description</th>
+</tr>
+<tr class="b"><td>debug</td>
+<td>Lets the doclet print additional output in the console and to a logfile.</td>
+</tr>
+<tr class="a"><td>author</td>
+<td>Print &quot;Author&quot; tags</td>
+</tr>
+<tr class="b"><td>version</td>
+<td>Print &quot;Version&quot; tags</td>
+</tr>
+<tr class="a"><td>tag.since</td>
+<td>Print &quot;since&quot; tags</td>
+</tr>
+<tr class="b"><td>summary.table</td>
+<td>Create summary tables</td>
+</tr>
+<tr class="a"><td>create.links</td>
+<td>Create hyperlinks</td>
+</tr>
+<tr class="b"><td>encrypted</td>
+<td>Encrypt the PDF file</td>
+</tr>
+<tr class="a"><td>allow.printing</td>
+<td>Allow printing of the PDF file</td>
+</tr>
+<tr class="b"><td>create.frame</td>
+<td>Create a bookmark frame</td>
+</tr>
+<tr class="a"><td>api.title.page</td>
+<td>Print a title page</td>
+</tr>
+<tr class="b"><td>filter</td>
+<td>Enables the tag-based filter</td>
+</tr>
+</table>
+</div>
+<div class="section"><h3><a name="Properties_with_a_value"></a>Properties with a value</h3>
+<table class="bodyTable"><tr class="a"><th>Property</th>
+<th>Description</th>
+</tr>
+<tr class="b"><td>pdf &lt;file&gt;</td>
+<td>The path of the created PDF file.</td>
+</tr>
+<tr class="a"><td>workdir &lt;dir&gt;</td>
+<td>The base directory for image file path specifications (default is the current directory).</td>
+</tr>
+<tr class="b"><td>sort &lt;list&gt;</td>
+<td>Optional comma-separated list of package names to define the ordering 
+				of the packages in the bookmarks frame.</td>
+</tr>
+<tr class="a"><td>dontspec &lt;list&gt;</td>
+<td>Optional comma-separated list of package names to define packages whose classes 
+			should not be printed fully qualified (just &quot;String&quot; instead of &quot;java.lang.String&quot;).</td>
+</tr>
+<tr class="b"><td>label.tag.&lt;name&gt; &lt;label&gt;</td>
+<td>Specifies a custom doc tag with a certain label.</td>
+</tr>
+<tr class="a"><td>label.bookmarks.title</td>
+<td>Overrides the text label to be printed for the title of the bookmarks.</td>
+</tr>
+<tr class="b"><td>label.bookmarks.index</td>
+<td>Overrides the text label to be printed for the index entry in the bookmarks.</td>
+</tr>
+<tr class="a"><td>label.bookmarks.overview</td>
+<td>Overrides the text label to be printed for the overview entry in the bookmarks.</td>
+</tr>
+<tr class="b"><td>label.bookmarks.packages</td>
+<td>Overrides the text label to be printed for the packages entry in the bookmarks.</td>
+</tr>
+<tr class="a"><td>label.bookmarks.otherPackages</td>
+<td>Only used with the <code>-group</code> parameter. Overrides the text label to be printed 
+			for the &quot;Other Packages&quot; entry in the bookmarks.</td>
+</tr>
+<tr class="b"><td>label.fields</td>
+<td>Overrides the text label to be printed for the fields entry in the bookmarks.</td>
+</tr>
+<tr class="a"><td>label.constructors</td>
+<td>Overrides the text label to be printed for the constructors entry in the bookmarks.</td>
+</tr>
+<tr class="b"><td>label.methods</td>
+<td>Overrides the text label to be printed for the methods entry in the bookmarks.</td>
+</tr>
+<tr class="a"><td>label.tag.&lt;tagname&gt;</td>
+<td>Defines the text label for a tag. Can either override the label of a default tag
+			such as &quot;author&quot;, or define the label for a custom tag (custom tags are not
+			printed as long as no label is defined for them).</td>
+</tr>
+<tr class="b"><td>inherited.summary.table=[yes|internal]</td>
+<td>Create summary tables for inherited fields/methods.
+		    If the values is set to <code>internal</code>, summary tables are printed only for elements inherited
+		    by classes and interfaces within the scope of the API. Elements inherited from other classes such as
+		    <code>java.lang.Object</code> are ignored.</td>
+</tr>
+<tr class="a"><td>appendix.&lt;number&gt;.name</td>
+<td>Defines the name / number of the appendix.</td>
+</tr>
+<tr class="b"><td>appendix.&lt;number&gt;.title</td>
+<td>Defines the title label of the appendix.</td>
+</tr>
+<tr class="a"><td>appendix.&lt;number&gt;.file=&lt;file path&gt;[,page,from-to,..,..]</td>
+<td>Path of the HTML or PDF file that should be included. If a PDF file is specified,
+			the filename may be followed by a comma-separated list of single page numbers or page
+			ranges, to define which pages to import from the PDF document.</td>
+</tr>
+<tr class="b"><td>page.size &lt;text&gt;</td>
+<td>&quot;letter&quot; or &quot;A4&quot; (default).</td>
+</tr>
+<tr class="a"><td>page.orientation &lt;text&gt;</td>
+<td>&quot;landscape&quot; or &quot;portrait&quot; (default).</td>
+</tr>
+<tr class="b"><td>page.numbers.prefix &lt;text&gt;</td>
+<td>Prefix-text for page numbers.</td>
+</tr>
+<tr class="a"><td>page.numbers.type &lt;type&gt;</td>
+<td>&quot;full&quot; or &quot;simple&quot;</td>
+</tr>
+<tr class="b"><td>page.numbers.alignment &lt;type&gt;</td>
+<td>&quot;left&quot;, &quot;center&quot;, &quot;right&quot; or &quot;switch&quot;. Defines the alignment of page numbers. 
+			&quot;switch&quot; means that they will switch from left to right and back, as needed for printing.</td>
+</tr>
+<tr class="a"><td>api.title.file &lt;file&gt;</td>
+<td>The path of a HTML file used for the title page of the PDF.</td>
+</tr>
+<tr class="b"><td>api.title &lt;file&gt;</td>
+<td>Title for the title page if no external HTML title page is used.</td>
+</tr>
+<tr class="a"><td>api.copyright &lt;copyright&gt;</td>
+<td>Copyright remark for the title page if no 
+				external HTML title page is used.</td>
+</tr>
+<tr class="b"><td>api.author &lt;author&gt;</td>
+<td>Author's name for the title page if no 
+				external HTML title page is used.</td>
+</tr>
+<tr class="a"><td>font.text.name &lt;ttf-file&gt;</td>
+<td>Font to be used for all regular text. 
+				Default is TIMES-ROMAN (path of TrueType-font, like ./fonts/garait.ttf).</td>
+</tr>
+<tr class="b"><td>font.text.enc</td>
+<td>Optional encoding for the text font.</td>
+</tr>
+<tr class="a"><td>font.code.name &lt;ttf-file&gt;</td>
+<td>Font to be used for all fixed-width code parts. 
+		Default is COURIER.</td>
+</tr>
+<tr class="b"><td>font.code.enc</td>
+<td>Optional encoding for the code font.</td>
+</tr>
+<tr class="a"><td>filter.tags &lt;taglist&gt;</td>
+<td>Comma-separated list of filter tags.</td>
+</tr>
+<tr class="b"><td>filter.tag.&lt;name&gt; &lt;label&gt;</td>
+<td>Filter tag with certain name and value.</td>
+</tr>
+</table>
+</div>
+</div>
+<div class="section"><h3><a name="Font_embedding"></a>Font embedding</h3>
+<p><p></p>
+
+As for the fonts: The specified font will be embedded into the PDF. If 
+that is not possible (due to legal restrictions of the font), the doclet
+will fail to create the PDF.
+	</p>
+</div>
+<div class="section"><h3><a name="Overriding_properties_with_parameters"></a>Overriding properties with parameters</h3>
+<p><p></p>
+
+Please note: A configuration file can be used in combination
+with command-line arguments. However, every configuration 
+value specified on the command line will override the same 
+configuration property from the property file. For example, if 
+the command-line parameter &quot;-workdir=./example/src3&quot; is 
+used, but in the configuration file there's a property 
+&quot;workdir=./example/src1&quot;, the value will be &quot;./example/src3&quot;.
+	</p>
+<p><p></p>
+<b>IMPORTANT NOTE</b>: In versions 0.6.0 and older of PDFDoclet, it was exactly 
+the other way around, which was not very logical and intuitive.
+Therefore I decided to change it (better getting rid of bad
+implementation at the risk of causing some temporary confusion 
+than keeping it forever).
+</p>
+<p><p></p>
+
+For information about how to use additional parameters 
+with a custom doclet, read Sun's javadoc instructions. 
+Also check out the targets &quot;example&quot; and &quot;test-pdf&quot; in 
+the build.xml file to see how it can be done.
+	</p>
+</div>
+</div>
+
+      </div>
+    </div>
+    <div class="clear">
+      <hr/>
+    </div>
+    <div id="footer">
+      <div class="xright">&#169;  
+          2013
+    
+          PDFDoclet
+          
+  
+
+  
+    
+  
+  
+  </div>
+      <div class="clear">
+        <hr/>
+      </div>
+    </div>
+  </body>
+</html>

@@ -1,0 +1,21 @@
+TODO
+====
+
+Known issues and bugs
+--------------------------------------------------------------------------------
+		
+	Bug in index: In some cases when a member gets printed completely 
+	on a new page, the index gets the number of the previous page.
+	
+To be done in future releases
+--------------------------------------------------------------------------------
+		
+	Header and footer not flexible enough yet. Placement of page 
+	numbering should be configurable. In the next version, variables 
+	might be introduced to be used in the header.
+
+	Optimization for double-sided printing (inserting empty pages when 
+	necessary to ensure that new chapters always begin on the right side).
+
+	Unnecessary lines at the end or beginning of a page (after or before 
+	a method description block) should be removed.

@@ -1,0 +1,193 @@
+inventory.html.template=/com/tarsecfun/laby/html/inventory.html
+mainpanel.html.template=/com/tarsecfun/laby/html/mainpanel.html
+login.user.html.template=/com/tarsecfun/laby/html/loginpage.html
+new.user.html.template=/com/tarsecfun/laby/html/createuserpage.html
+
+###########################################################
+#
+#   Servlet URLs configuration
+#
+###########################################################
+laby.login.url=http://icefire.tarsec.com:5510/servlet/LabyLogin
+laby.start.url=http://icefire.tarsec.com:5510/servlet/Laby
+laby.newuser.url=http://icefire.tarsec.com:5510/servlet/LabyNewUser
+laby.logout.url=http://icefire.tarsec.com:5510/servlet/LabyServlet?action=logout
+
+###########################################################
+#
+#   Logging configuration
+#
+###########################################################
+log.dir=/tmp/msc/labylog
+log.trace=trace.log
+log.file=laby.log
+log.name=Laby Log
+log.desc=Laby Events and Stuff
+
+###########################################################
+#
+#   Database queries for prepared statements
+#
+###########################################################
+sql.query.loadserdata=SELECT * FROM UNIT_TLIB.LABY_CHARACTER WHERE(%namekey%=?)
+sql.query.loaduserdata.parm1=%namekey%=NAME
+
+sql.query.saveserdata=UPDATE UNIT_TLIB.LABY_CHARACTER SET (%alias%=?,%x%=?,%y%=?,%z%=?,%dir%=?,%state%=?,%life%=?) WHERE(%namekey%=?)
+sql.query.saveuserdata.parm1=%alias%=ALIAS
+sql.query.saveuserdata.parm2=%x%=POSITIONX
+sql.query.saveuserdata.parm3=%y%=POSITIONY
+sql.query.saveuserdata.parm4=%z%=POSITIONZ
+sql.query.saveuserdata.parm5=%dir%=DIRECTION
+sql.query.saveuserdata.parm6=%state%=STATE
+sql.query.saveuserdata.parm7=%life%=LIFE
+sql.query.saveuserdata.parm8=%namekey%=NAME
+
+sql.query.createuserdata=INSERT INTO UNIT_TLIB.LABY_CHARACTER VALUES(%id%=?,%name%=?,%alias%=?,%x%=?,%y%=?,%z%=?,%dir%=?,%state%=?,%life%=?)
+sql.query.createuserdata.parm1=%alias%=ALIAS
+sql.query.createuserdata.parm2=%x%=POSITIONX
+sql.query.createuserdata.parm3=%y%=POSITIONY
+sql.query.createuserdata.parm4=%z%=POSITIONZ
+sql.query.createuserdata.parm5=%dir%=DIRECTION
+sql.query.createuserdata.parm6=%state%=STATE
+sql.query.createuserdata.parm7=%life%=LIFE
+sql.query.createuserdata.parm8=%name%=NAME
+sql.query.createuserdata.parm9=%id%=ID
+
+###########################################################
+#
+#   Database index generator configuration
+#
+###########################################################
+unique.id.generator=com.tarsecfun.laby.jdbc.oracle.IdGenerator
+
+###########################################################
+#
+#   Database driver configuration
+#
+###########################################################
+jdbc.driver.class=oracle.jdbc.driver.OracleDriver
+jdbc.driver.url=jdbc:oracle:thin:dev_1/tarsec@icefire.tarsec.com:1521:ikarus
+
+###########################################################
+#
+#   Graphics configuration
+#
+###########################################################
+graphics.factory.impl=com.tarsecfun.laby.graphics.text.TextGraphicsFactory
+
+# Path of HTML file containing color tables
+# for TextView class. This path must either be
+# a valid file path or the path of a resource
+# in the classpath.
+graphics.text.factory.colortable=/com/tarsecfun/laby/html/colortable.html
+
+# Configuration values for com.tarsecfun.laby.view.TextView class
+graphics.textview.lines=18
+graphics.textview.columns=59
+graphics.textview.transparency=:
+graphics.textview.bgcolor=o
+
+#
+#   TextView positioning values
+#
+
+# vertical offset for frontal views
+
+frontal.off.1 = 2
+frontal.off.2 = 3
+frontal.off.3 = 3
+frontal.off.4 = 5
+frontal.off.5 = 7
+
+
+##------------ Distance 5 -------------
+
+xpos.1 = 20
+ypos.1 = 6
+
+xpos.2 = 24
+ypos.2 = 6
+
+xpos.3 = 28
+ypos.3 = 6
+
+xpos.4 = 30
+ypos.4 = 6
+
+xpos.5 = 30
+ypos.5 = 6
+
+
+##------------ Distance 4 -------------
+
+xpos.6 = 5 
+ypos.6 = 5
+
+xpos.7 = 15
+ypos.7 = 5
+
+xpos.8 = 25
+ypos.8 = 5
+
+xpos.9 = 32
+ypos.9 = 5
+
+xpos.10 = 36
+ypos.10 = 5
+
+
+##------------ Distance 3 -------------
+
+xpos.11 = -10
+ypos.11 = 4
+
+xpos.12 = 6 
+ypos.12 = 4
+
+xpos.13 = 22
+ypos.13 = 4
+
+xpos.14 = 35
+ypos.14 = 4
+
+xpos.15 = 45
+ypos.15 = 4
+
+
+##------------ Distance 2 -------------
+
+xpos.16 = -16
+ypos.16 = 3
+
+xpos.17 = -10
+ypos.17 = 3
+
+xpos.18 = 17
+ypos.18 = 3
+
+xpos.19 = 38
+ypos.19 = 3
+
+xpos.20 = 54
+ypos.20 = 3
+
+
+##------------ Distance 1 -------------
+
+xpos.21 = -29
+ypos.21 = 1
+
+xpos.22 = 10
+ypos.22 = 1
+
+xpos.23 = 42
+ypos.23 = 1
+
+
+##------------ Distance 0 -------------
+
+xpos.24 = -7
+ypos.24 = 1
+
+xpos.25 = 49
+ypos.25 = 1
