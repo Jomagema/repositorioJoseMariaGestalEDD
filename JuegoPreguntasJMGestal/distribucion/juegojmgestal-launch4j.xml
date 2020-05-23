@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<launch4jConfig>
+  <dontWrapJar>false</dontWrapJar>
+  <headerType>console</headerType>
+  <jar>J:\Jose\Instituto\1º DAM\PROGRAMACION\NetBeans\Nueva Carpeta\JuegoPreguntasJMGestal\dist\JuegoPreguntasJMGestal.jar</jar>
+  <outfile>J:\Jose\Instituto\1º DAM\PROGRAMACION\NetBeans\Nueva Carpeta\JuegoPreguntasJMGestal\distribucion\files\JuegoJMGestal.exe</outfile>
+  <errTitle></errTitle>
+  <cmdLine></cmdLine>
+  <chdir>.</chdir>
+  <priority>normal</priority>
+  <downloadUrl>http://java.com/download</downloadUrl>
+  <supportUrl></supportUrl>
+  <stayAlive>false</stayAlive>
+  <restartOnCrash>false</restartOnCrash>
+  <manifest></manifest>
+  <icon>J:\Jose\Instituto\1º DAM\PROGRAMACION\NetBeans\Nueva Carpeta\JuegoPreguntasJMGestal\distribucion\icono.ico</icon>
+  <jre>
+    <path></path>
+    <bundledJre64Bit>false</bundledJre64Bit>
+    <bundledJreAsFallback>false</bundledJreAsFallback>
+    <minVersion>1.0.0</minVersion>
+    <maxVersion></maxVersion>
+    <jdkPreference>preferJre</jdkPreference>
+    <runtimeBits>64/32</runtimeBits>
+  </jre>
+  <versionInfo>
+    <fileVersion>1.1.1.1</fileVersion>
+    <txtFileVersion>1.1</txtFileVersion>
+    <fileDescription>Applicstion Java</fileDescription>
+    <copyright>(C) IES</copyright>
+    <productVersion>1.1.1.1</productVersion>
+    <txtProductVersion>1.1</txtProductVersion>
+    <productName>JuegoPreguntas</productName>
+    <companyName>IES</companyName>
+    <internalName>JMG</internalName>
+    <originalFilename>JuegoJMGestal.exe</originalFilename>
+    <trademarks></trademarks>
+    <language>CASTILIAN_SPANISH</language>
+  </versionInfo>
+</launch4jConfig>
